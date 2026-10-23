@@ -1,0 +1,163 @@
+{
+  "_leia-me": "Fontes do guia. Dicas (conquistas.json) e tarefas (rota.json) citam fontes pelo \"id\". \"short\" é o nome curto que aparece no fim de cada dica; \"about\" diz o que aquela fonte confirmou. Divergências entre fontes vão em \"confirm\", dizendo quem afirma o quê.",
+  "sources": [
+    {
+      "id": "steam-stats",
+      "title": "Steam — Estatísticas de conquistas de Age of Empires II: Definitive Edition",
+      "short": "Steam",
+      "url": "https://steamcommunity.com/stats/813780/achievements/?l=brazilian",
+      "about": "nomes, descrições oficiais, ícones e porcentagens globais."
+    },
+    {
+      "id": "steam-100",
+      "title": "Brachragon — Age of Empires II: Def. Edition [+DLC] - 100% Achievement Guide (Steam)",
+      "short": "Guia 100% (Steam)",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1929314064",
+      "about": "a base da maioria das dicas: setups de escaramuça, mapa Arena, contadores e as conquistas de missão de todas as DLCs até Viking Sagas."
+    },
+    {
+      "id": "steam-campanhas",
+      "title": "Alex — ALL Campaign-Specific Achievements - A Definitive Guide (Steam)",
+      "short": "Guia de campanhas (Steam)",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2395435656",
+      "about": "detalhes das conquistas de missão do jogo base, Lords of the West, Dawn of the Dukes, Dynasties of India e Mountain Royals, e o Pinguim de Vinlândia."
+    },
+    {
+      "id": "steam-dlc-cn",
+      "title": "Silent丶 — 帝国时代2决定版DLC全成就指南 (DLC 100% Achievement Guide, Steam)",
+      "short": "Guia das DLCs (Steam, chinês)",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2805387183",
+      "about": "Last Chieftains, Viking Sagas (incluindo os baús do Acumulardrada), Shimazu, Fetih e números de Alexandre (Legitimidade, Tebas, Hidaspes)."
+    },
+    {
+      "id": "steam-civs",
+      "title": "$venie — AoE 2 - Achievement: Age of Empires (Steam)",
+      "short": "Guia Age of Empires (Steam)",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3402768201",
+      "about": "quais civilizações contam para a conquista Age of Empires e o bug de armênios e georgianos (comentários de 2025)."
+    },
+    {
+      "id": "steam-1x1",
+      "title": "Unlock 1v1 AI 'x' Difficulty Achievement (Quick & Easy) (Steam)",
+      "short": "Guia IA 1x1 (Steam)",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3042431248",
+      "about": "o atalho de Capturar a Relíquia para as seis vitórias 1x1 contra a IA."
+    },
+    {
+      "id": "ta",
+      "title": "TrueAchievements — soluções das conquistas de Age of Empires II: DE",
+      "short": "TrueAchievements",
+      "url": "https://www.trueachievements.com/a287405/viking-victory-achievement",
+      "about": "o atalho de pontuação no Death Match ainda funcionando em maio de 2025 e o relato de falha do Tranquilo no PC."
+    },
+    {
+      "id": "forum",
+      "title": "Fórum oficial Age of Empires — conquistas que não destravavam",
+      "short": "Fórum oficial",
+      "url": "https://forums.ageofempires.com/t/chasing-the-crown-achivement-not-working/109304",
+      "about": "a correção de Eterna Gratidão e Em Busca da Coroa na atualização de janeiro de 2021."
+    },
+    {
+      "id": "dexerto",
+      "title": "Dexerto — Age of Empires 2 Definitive Edition cheats",
+      "short": "Dexerto",
+      "url": "https://www.dexerto.com/gaming/age-of-empires-2-aoe2-definitive-edition-cheats-2406190",
+      "about": "que usar cheats desliga as conquistas."
+    },
+    {
+      "id": "jogando",
+      "title": "Testado jogando",
+      "short": "testado jogando",
+      "about": "o que foi conferido no próprio jogo durante a escrita do guia."
+    }
+  ],
+  "confirm": [
+    {
+      "text": "<em>Encouraçado</em> (Lepanto): o guia 100% sugere derrotar os turcos; um comentário diz que só destrava com vitória por Maravilha; o guia de campanhas diz que os desembarques são por tempo e basta vigiar os pontos.",
+      "sources": [
+        "steam-100",
+        "steam-campanhas"
+      ]
+    },
+    {
+      "text": "<em>Wololo</em>: segundo um comentário no guia 100%, só destrava na tela de estatísticas do fim da partida, não no meio dela.",
+      "sources": [
+        "steam-100"
+      ]
+    },
+    {
+      "text": "<em>Tranquilo</em> (IA Padrão): um comentário no TrueAchievements diz que falha no PC e pode exigir várias tentativas.",
+      "sources": [
+        "ta"
+      ]
+    },
+    {
+      "text": "Atalho de Capturar a Relíquia para a IA 1x1: nenhum comentário do guia confirma que ainda funciona.",
+      "sources": [
+        "steam-1x1"
+      ]
+    },
+    {
+      "text": "Vitórias de jurchéns e quitais: o guia 100% diz que o atalho de pontuação não funciona com os quitais e recomenda Regicídio para os jurchéns.",
+      "sources": [
+        "steam-100"
+      ]
+    },
+    {
+      "text": "<em>Age of Empires</em>: o guia diz que as civilizações da Batalha pela Grécia contam e as de Return of Rome não; há relatos de 2025 de quem venceu com todas e não destravou até repetir armênios e georgianos.",
+      "sources": [
+        "steam-civs"
+      ]
+    },
+    {
+      "text": "<em>Eterna Gratidão</em>: o guia de campanhas avisou em 2021 que uma atualização podia impedir a conquista; o fórum oficial relata que a correção de janeiro de 2021 resolveu.",
+      "sources": [
+        "steam-campanhas",
+        "forum"
+      ]
+    },
+    {
+      "text": "<em>Ei, Fora DaqUr</em>: o guia 100% diz que é preciso destruir a Maravilha de Ur duas vezes.",
+      "sources": [
+        "steam-100"
+      ]
+    },
+    {
+      "text": "<em>Eu Sou Legião</em>: o guia 100% diz que destrava ao derrotar o laranja, não exatamente \"o exército dácio\".",
+      "sources": [
+        "steam-100"
+      ]
+    },
+    {
+      "text": "<em>Só se Marcha de Estômago Cheio</em> (Yodit 3): há relato de que a Pérsia precisa virar inimiga antes de derrotar o último alvo.",
+      "sources": [
+        "steam-100"
+      ]
+    },
+    {
+      "text": "<em>Acumulardrada</em>: o guia chinês diz que o item de Stamford Bridge destrava na hora se todos os outros foram pegos; o guia 100% avisa que perder um baú pode travar a conquista e cita uma possível correção posterior.",
+      "sources": [
+        "steam-dlc-cn",
+        "steam-100"
+      ]
+    },
+    {
+      "text": "<em>Shogun</em>: o plano do guia 100% pode estar desatualizado; um comentário de 2025 diz que a IA chega à Imperial por volta dos 10 min no Difícil.",
+      "sources": [
+        "steam-100"
+      ]
+    },
+    {
+      "text": "<em>Parinirvana</em>: o guia 100% fala em limite de 13 minutos, que não aparece na descrição da Steam.",
+      "sources": [
+        "steam-100"
+      ]
+    },
+    {
+      "text": "Horas totais e nota 8/10 são estimativas deste guia; nenhuma fonte deu números para o 100% no PC.",
+      "sources": [
+        "steam-100"
+      ]
+    }
+  ]
+}
