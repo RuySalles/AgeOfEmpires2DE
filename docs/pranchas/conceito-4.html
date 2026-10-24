@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conceito 4 — A Árvore Bordada (1 + 3)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Spectral:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="prancha.css">
+<style>
+/* ===== Conceito 4: A Árvore Bordada — a estrutura da árvore de tecnologia (1) feita no material da tapeçaria (3) ===== */
+.t-escuro{ /* "Salão à luz de tocha" */
+  --parede:#16110c;--linho:#2a2218;--linho2:#332a1e;--linho3:#3f3426;--fio:#eee2c9;--suave:#d8cbb1;--mudo:#b5a689;
+  --terracota:#e47f58;--ocre:#e5b552;--salvia:#a6ba73;--anil:#93a9dc;--tinta:#1b140d;--trama:#ffffff08;--cinza:grayscale(1) brightness(.6) sepia(.25);
+}
+.t-claro{ /* "Linho cru" */
+  --parede:#d9cdb2;--linho:#f1e8d4;--linho2:#e7dcc3;--linho3:#dccfb2;--fio:#2c2418;--suave:#463a2b;--mudo:#675944;
+  --terracota:#9c3f26;--ocre:#7f5a0c;--salvia:#4c5b2b;--anil:#2e3f6b;--tinta:#fbf5e8;--trama:#0000000b;--cinza:grayscale(1) contrast(.8) brightness(1.1) sepia(.2);
+}
+.c4{background:var(--parede);color:var(--fio);font:17px/1.55 Spectral,Georgia,serif;padding:22px}
+.c4 *{box-sizing:border-box}
+.c4-tecido{background:repeating-linear-gradient(0deg,var(--trama) 0 1px,transparent 1px 4px),repeating-linear-gradient(90deg,var(--trama) 0 1px,transparent 1px 4px),var(--linho)}
+.c4 h1,.c4 h2,.c4 h3,.c4-sc{font-family:"Marcellus SC",serif;font-weight:400}
+/* Barra de recursos do jogo, bordada em retalhos */
+.c4-recursos{display:flex;flex-wrap:wrap;gap:8px}
+.c4-recursos span{display:inline-flex;align-items:center;gap:8px;padding:4px 12px 4px 4px;border:2px dashed var(--c);border-radius:4px;font-weight:500;font-size:.92rem;background:var(--linho)}
+.c4-recursos i{width:26px;height:26px;border-radius:3px;display:grid;place-items:center;font-style:normal;font-size:.85rem;color:var(--tinta);background:var(--c)}
+.c4-topo{padding:20px 22px 24px;border-block:6px double var(--terracota)}
+.c4-topo h1{font-size:clamp(1.9rem,5vw,3.1rem);line-height:1.05;margin:18px 0 6px}
+.c4-topo h1 b{color:var(--terracota);font-weight:400}
+.c4-topo p{color:var(--suave);margin:0 0 18px;max-width:640px}
+/* As quatro Eras, bordadas; o fio vermelho atravessa as Eras */
+.c4-eras{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding-bottom:20px}
+.c4-era{padding:10px 8px;text-align:center;border:2px dashed var(--mudo);border-radius:4px;background:var(--linho2);color:var(--mudo)}
+.c4-era small{display:block;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
+.c4-era strong{font:400 1.08rem "Marcellus SC",serif}
+.c4-era[data-passada]{border-style:solid;border-color:var(--ocre);color:var(--fio);background:color-mix(in srgb,var(--ocre) 18%,var(--linho2))}
+.c4-era[data-atual]{border-style:solid;border-color:var(--terracota);color:var(--fio);box-shadow:0 0 0 3px var(--linho),0 0 0 5px var(--terracota)}
+.c4-fio{position:absolute;left:0;right:0;bottom:4px;height:6px}
+.c4-fio:before{content:"";position:absolute;inset:2px 0 auto;border-top:2px dashed color-mix(in srgb,var(--mudo) 55%,transparent)}
+.c4-fio i{position:absolute;left:0;top:0;height:6px;width:calc(var(--g-progresso,0)*100%);background:repeating-linear-gradient(90deg,var(--terracota) 0 12px,transparent 12px 16px);transition:width .8s}
+.c4-fio b{position:absolute;top:-12px;left:calc(var(--g-progresso,0)*100% - 8px);transform:rotate(-20deg);transition:left .8s}
+.c4-pct{display:flex;justify-content:space-between;color:var(--mudo);font-size:.9rem}
+.c4-pct b{color:var(--fio)}
+/* Capítulo = um edifício da árvore, com placa bordada */
+.c4-cap{margin-top:24px;border:2px solid var(--ocre);border-radius:4px}
+.c4-cap header{display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--linho2);border-bottom:2px solid var(--ocre)}
+.c4-cap .ic{flex:none;width:44px;height:44px;border:2px dashed var(--terracota);border-radius:4px;display:grid;place-items:center;font:400 1rem "Marcellus SC",serif;color:var(--terracota);background:var(--linho)}
+.c4-cap h2{margin:0;font-size:1.25rem;line-height:1.2}
+.c4-cap header p{margin:0;color:var(--mudo);font-size:.9rem;font-style:italic}
+.c4-cap .cnt{margin-left:auto;color:var(--terracota);white-space:nowrap;font:400 1rem "Marcellus SC",serif}
+/* Nós da árvore, costurados no linho e ligados por linha de bordado */
+.c4-nos{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding:18px 16px 20px}
+[data-raridade="epic"]{--cor:var(--anil)}[data-raridade="rare"]{--cor:var(--salvia)}[data-raridade="uncommon"]{--cor:var(--ocre)}[data-raridade="common"]{--cor:var(--terracota)}
+.c4-no{position:relative;display:grid;grid-template-columns:68px minmax(0,1fr);gap:12px;padding:12px;border:2px dashed color-mix(in srgb,var(--cor) 60%,transparent);border-radius:4px;background:var(--linho);transition:border-color .4s,box-shadow .4s}
+.c4-no:not(:last-child):after{content:"";position:absolute;top:46px;right:-22px;width:20px;border-top:2px dashed var(--mudo)}
+.c4-icone{width:68px;height:68px;border:3px dashed var(--cor);border-radius:4px;overflow:hidden;transition:border-style .3s}
+.c4-icone img{width:100%;height:100%;display:block;filter:var(--cinza);transition:filter .6s}
+.c4-no[data-feita]{border-style:solid;border-color:var(--cor);box-shadow:0 0 0 4px var(--linho),0 0 0 6px color-mix(in srgb,var(--cor) 45%,transparent)}
+.c4-no[data-feita] .c4-icone{border-style:solid}
+.c4-no[data-feita] .c4-icone img{filter:none}
+.c4-no h3{margin:0;font-size:1.04rem;line-height:1.25}
+.c4-no .desc{margin:2px 0 6px;color:var(--mudo);font-size:.88rem;font-style:italic}
+.c4-no .dica{margin:0;color:var(--suave);font-size:.94rem}
+.c4-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;font-size:.78rem;color:var(--mudo)}
+.c4-tags span{border-bottom:2px dashed var(--cor);padding:0 2px}
+.c4-tags .rar{color:var(--fio)}
+.c4-pesq{grid-column:1/-1;display:flex;align-items:center;justify-content:center;min-height:44px;border:2px dashed var(--cor);border-radius:3px;cursor:pointer;font:400 .95rem "Marcellus SC",serif;letter-spacing:.06em}
+.c4-pesq input{position:absolute;opacity:0;width:1px;height:1px}
+.c4-pesq:before{content:"⚒ Pesquisar"}
+.c4-no[data-feita] .c4-pesq{border-style:solid;background:var(--cor);color:var(--tinta)}
+.c4-no[data-feita] .c4-pesq:before{content:"✚ Pesquisada e bordada"}
+.c4-pesq:focus-within{outline:2px solid var(--ocre);outline-offset:2px}
+@container (max-width:640px){
+  .c4{padding:12px}.c4-topo{padding:16px 14px 20px}
+  .c4-eras{grid-template-columns:repeat(2,1fr)}
+  .c4-nos{grid-template-columns:1fr;padding-left:32px}
+  .c4-nos:before{content:"";position:absolute;left:15px;top:18px;bottom:20px;border-left:2px dashed var(--mudo)}
+  .c4-no:after{display:none}
+  .c4-no:before{content:"";position:absolute;left:-19px;top:46px;width:17px;border-top:2px dashed var(--mudo)}
+  .c4-cap header{flex-wrap:wrap}
+}
+</style>
+</head>
+<body>
+<div class="pr-wrap">
+ <div class="pr-head">
+  <div><h1>Conceito 4 · A Árvore Bordada <small style="font-weight:400;color:#777">(1 + 3, mais tapeçaria)</small></h1>
+   <p><strong>A árvore de tecnologia do jogo, bordada numa tapeçaria.</strong> A estrutura vem do conceito 1 (Eras, edifícios, nós a pesquisar, barra de recursos); o material vem do 3 (linho, lã, costura tracejada, fio com agulha).</p></div>
+  <div class="pr-nav"><a href="conceito-1.html">Conceito 1</a><a href="conceito-3.html">Conceito 3</a><a href="conceito-5.html">Conceito 5 →</a></div>
+ </div>
+ <div class="pr-grid">
+  <div class="pr-box">
+   <h2>O que vem de cada um</h2>
+   <table>
+    <tr><td>Do 1 (árvore)</td><td>Barra de recursos com os números do 100%; trilho das quatro Eras; capítulo como edifício; conquista como nó com ícone apagado até ser pesquisado; linhas ligando os nós; verbo "Pesquisar"</td></tr>
+    <tr><td>Do 3 (tapeçaria)</td><td>Fundo de linho com trama; cores de lã por raridade; costura tracejada que fecha ao marcar; bainha dupla; fio vermelho com agulha como barra de progresso</td></tr>
+    <tr><td>Sai do 3</td><td>A faixa das 20 cenas, os títulos em letra de legenda (Metamorphous) e o vocabulário de bordado nos filtros</td></tr>
+    <tr><td>Por que faz sentido</td><td>Tapeçarias medievais narravam o avanço de um povo; aqui ela borda o avanço pelas Eras</td></tr>
+   </table>
+  </div>
+  <div class="pr-box">
+   <h2>Paleta e fontes</h2>
+   <b>Escuro · "Salão à luz de tocha"</b> e <b>Claro · "Linho cru"</b> (as do conceito 3)
+   <div class="pr-sw"><span style="background:#2a2218;color:#eee2c9">linho</span><span style="background:#e47f58">terracota</span><span style="background:#e5b552">ocre</span><span style="background:#a6ba73">sálvia</span><span style="background:#93a9dc">anil</span><span style="background:#f1e8d4">linho cru</span></div>
+   <p style="margin:0"><span style="font:400 1.5rem 'Marcellus SC',serif">Marcellus SC</span> títulos (do 1, mais legível que a letra de legenda) · <span style="font:400 1.05rem Spectral,serif">Spectral</span> texto (do 3).</p>
+   <h2 style="margin-top:14px">Momento de assinatura</h2>
+   <p class="pr-note" style="margin:0">"Pesquisar": o ícone cinza ganha cor e a costura do nó fecha; o fio vermelho avança pelas Eras e a Era atual ganha a moldura bordada. <b>Teste: clique em "Pesquisar".</b></p>
+  </div>
+ </div>
+ <div class="pr-label">Recorte real · tema escuro</div>
+ <div class="pr-frame"><div class="c4 t-escuro" data-quadro></div></div>
+ <div class="pr-label">Recorte real · tema claro</div>
+ <div class="pr-frame"><div class="c4 t-claro" data-quadro></div></div>
+ <div class="pr-label">Celular · 375 px</div>
+ <div class="pr-phones">
+  <div class="pr-phone"><div class="c4 t-escuro" data-quadro></div></div>
+  <div class="pr-phone"><div class="c4 t-claro" data-quadro></div></div>
+ </div>
+</div>
+<script src="dados.js"></script>
+<script src="prancha.js"></script>
+<script>
+(async () => {
+const ERAS = [['Era das', 'Trevas', 0], ['Era', 'Feudal', .25], ['Era dos', 'Castelos', .5], ['Era', 'Imperial', .75]];
+const render = vm => `
+<section class="c4-topo c4-tecido">
+ <div class="c4-recursos">
+  <span style="--c:var(--terracota)"><i>⚒</i><b data-feitas></b> pesquisadas</span><span style="--c:var(--ocre)"><i>▣</i>${vm.nCapitulos} edifícios</span>
+  <span style="--c:var(--salvia)"><i>◆</i>${vm.overview.difficulty}/10</span><span style="--c:var(--anil)"><i>⧗</i>${vm.overview.hours}</span>
+ </div>
+ <h1>A árvore das <b>${vm.total} conquistas</b></h1>
+ <p>Do jogo base às DLCs, bordada nó a nó: pesquise cada conquista e avance pelas Eras até a Imperial.</p>
+ <div class="c4-eras">${ERAS.map(([a, b]) => `<div class="c4-era" data-era><small>${a}</small><strong>${b}</strong></div>`).join('')}
+  <div class="c4-fio" aria-hidden="true"><i></i><b>🪡</b></div></div>
+ <div class="c4-pct"><span>Era atual: <b data-era-nome></b></span><span><b data-pct></b> bordado</span></div>
+</section>
+<section class="c4-cap c4-tecido">
+ <header><span class="ic">VI</span><div><h2>${vm.capitulo.titulo}</h2><p>${vm.capitulo.subtitulo}</p></div><span class="cnt">1/${vm.capitulo.total}</span></header>
+ <div class="c4-nos">${vm.cards.map(c => `
+  <article class="c4-no" data-card data-raridade="${c.raridade.chave}"${c.feita ? ' data-feita' : ''}>
+   <div class="c4-icone"><img src="${c.icone}" alt=""></div>
+   <div><h3>${c.nome}</h3><p class="desc">“${c.desc}”</p><p class="dica">${c.dica}</p>
+    <div class="c4-tags"><span class="rar">${c.raridade.rotulo} · ${c.raridade.pct}</span>${c.dificuldade ? `<span>dificuldade ${c.dificuldade}/5</span>` : ''}${c.tempo ? `<span>${c.tempo}</span>` : ''}</div></div>
+   <label class="c4-pesq"><input type="checkbox" aria-label="Pesquisar ${c.nome}"></label>
+  </article>`).join('')}
+ </div>
+</section>`;
+await montar({ render, capitulo: 'reis', ids: ['ACHIEVEMENT_CAMPAIGN_WALLACE_COMPLETED', 'ACHIEVEMENT_KUSHLUK_ASSASSINATION', 'ACHIEVEMENT_CATHEDRAL_RUSH'], feitas: ['ACHIEVEMENT_CAMPAIGN_WALLACE_COMPLETED'] });
+document.querySelectorAll('[data-quadro]').forEach(q => {
+  const set = p => {
+    const i = ERAS.filter(([, , min]) => p >= min).length - 1;
+    q.querySelectorAll('[data-era]').forEach((el, k) => { el.toggleAttribute('data-passada', k < i); el.toggleAttribute('data-atual', k === i); });
+    q.querySelectorAll('[data-era-nome]').forEach(el => { el.textContent = ERAS[i][0] + ' ' + ERAS[i][1]; });
+  };
+  q.addEventListener('progresso', e => set(e.detail));
+  set(+getComputedStyle(q).getPropertyValue('--g-progresso') || 0);
+});
+})();
+</script>
+</body>
+</html>

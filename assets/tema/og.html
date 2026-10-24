@@ -1,54 +1,48 @@
 <!DOCTYPE html>
 <!--
-  Imagem de compartilhamento (og-image-N.jpg, 1200×630) do tema "A Tapeçaria".
+  Imagem de compartilhamento (og-image-N.jpg, 1200×630) do tema "O Painel da Árvore".
   Gerar: python tools/gerar_og.py. Os números vêm de data/*.json.
 -->
 <html lang="pt-BR" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="tema.css">
-<link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Spectral:wght@400;500&display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Metamorphous&family=Source+Sans+3:wght@400;600;700&display=block" rel="stylesheet">
 <style>
   html,body{width:1200px;height:630px;overflow:hidden;margin:0}
-  body{background:var(--parede)}
-  .card{position:relative;width:1200px;height:630px;padding:40px 56px}
-  .pano{height:100%;padding:34px 44px;box-shadow:var(--sombra)}
-  .legenda{color:var(--terracota);font-size:20px;margin:0}
-  h1{margin:10px 0 12px;font-size:78px;line-height:1.02;letter-spacing:.02em}
-  h1 em{font-style:normal;color:var(--terracota)}
-  .sub{margin:0;font-size:27px;color:var(--suave);max-width:900px;line-height:1.3}
-  .cenas{position:absolute;left:100px;right:100px;bottom:96px;gap:8px}
-  .mini-cena{font-size:15px}
-  .fio{left:100px;right:100px;bottom:72px}
-  .meadas{margin-top:22px;gap:12px}
-  .meada{font-size:18px}
+  .card{width:1200px;height:630px;padding:40px 52px}
+  .arvore-topo{height:100%;margin:0;padding:28px 34px}
+  .recursos{font-size:20px}.recursos i{width:30px;height:30px;font-size:16px}
+  h1{margin:22px 0 14px!important;font-size:80px!important}
+  .eras{--g-progresso:.36}.era strong{font-size:24px}.era small{font-size:14px}
+  .faixa{margin-top:20px}.cena{font-size:14px}.fio{--g-progresso:.36}
 </style>
 </head>
 <body>
 <div class="card">
- <div class="pano tecido bainha">
-  <p class="legenda">Hic incipit · Age of Empires II: Definitive Edition</p>
-  <h1>A tapeçaria das<br><em><span id="count">370</span> conquistas</em></h1>
-  <p class="sub">Dica e fonte para cada uma, do jogo base às DLCs, bordadas cena a cena.</p>
-  <div class="meadas">
-   <span class="meada" data-raridade="epic"><i></i>Anil · <b id="epic">0</b> épicas</span>
-   <span class="meada" data-raridade="rare"><i></i>Sálvia · <b id="rare">0</b> raras</span>
-   <span class="meada" data-raridade="uncommon"><i></i>Ocre · <b id="uncommon">0</b> incomuns</span>
-   <span class="meada" data-raridade="common"><i></i>Terracota · <b id="common">0</b> comuns</span>
+ <section class="arvore-topo">
+  <div class="recursos placa">
+   <span><i class="r1">⚒</i><b id="count">370</b>&nbsp;conquistas</span><span><i class="r2">▣</i><b id="caps">20</b>&nbsp;edifícios</span>
+   <span><i class="r3">◆</i>dica e fonte em cada uma</span><span><i class="r4">⧗</i>do jogo base às DLCs</span>
   </div>
-  <div class="cenas" id="cenas"></div>
-  <div class="fio" style="--g-progresso:.32"><i></i><b>🪡</b></div>
- </div>
+  <h1>A árvore das <em><span id="count2">370</span> conquistas</em></h1>
+  <div class="eras">
+   <div class="era" data-passada><small>Era das</small><strong>Trevas</strong></div>
+   <div class="era" data-atual><small>Era</small><strong>Feudal</strong></div>
+   <div class="era"><small>Era dos</small><strong>Castelos</strong></div>
+   <div class="era"><small>Era</small><strong>Imperial</strong></div>
+  </div>
+  <div class="faixa"><span class="faixa-legenda">A tapeçaria da campanha · Age of Empires II: Definitive Edition</span><div class="cenas" id="cenas"></div><div class="fio"><i></i></div></div>
+ </section>
 </div>
 <script type="module">
   const conq = await fetch('../../data/conquistas.json').then(r => r.json());
-  const a = Object.values(conq.achievements);
-  document.getElementById('count').textContent = a.length;
-  const faixa = p => p < 8 ? 'epic' : p < 15 ? 'rare' : p < 30 ? 'uncommon' : 'common';
-  ['epic', 'rare', 'uncommon', 'common'].forEach(k => { document.getElementById(k).textContent = a.filter(x => faixa(x.pct) === k).length; });
+  const n = Object.keys(conq.achievements).length;
+  document.getElementById('count').textContent = n; document.getElementById('count2').textContent = n;
+  document.getElementById('caps').textContent = conq.chapters.length;
   const R = ['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV','XVI','XVII','XVIII','XIX','XX'];
   document.getElementById('cenas').innerHTML = conq.chapters.map((c, i) =>
-    `<span class="mini-cena"${i < 6 ? ' data-bordada style="--g-progresso:1"' : ''}${i === 6 ? ' data-atual style="--g-progresso:.4"' : ''}><span>${R[i] || i + 1}</span></span>`).join('');
+    `<span class="cena"${i < 7 ? ' data-bordada style="--g-progresso:1"' : ''}${i === 7 ? ' data-atual style="--g-progresso:.4"' : ''}><span>${R[i] || i + 1}</span></span>`).join('');
 </script>
 </body>
 </html>

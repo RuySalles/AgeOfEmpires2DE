@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- Ícone da aba: retalho de linho com costura tracejada e o ponto em cruz (tema "A Tapeçaria") -->
-  <rect width="64" height="64" rx="12" fill="#16110c"/>
-  <rect x="8" y="8" width="48" height="48" rx="6" fill="#2a2218" stroke="#e47f58" stroke-width="3" stroke-dasharray="6 4"/>
-  <path d="M32 17v30M17 32h30" stroke="#e5b552" stroke-width="7" stroke-linecap="round"/>
+  <!-- Ícone da aba: nó da árvore de tecnologia (moldura dourada) com a torre do castelo (tema "O Painel da Árvore") -->
+  <rect width="64" height="64" rx="12" fill="#0e131b"/>
+  <rect x="8" y="8" width="48" height="48" rx="5" fill="#222c3b" stroke="#e6b450" stroke-width="4"/>
+  <path d="M22 20h4v3h4v-3h4v3h4v-3h4v8l-3 3v9h3v4H22v-4h3v-9l-3-3Z" fill="#e6b450"/>
 </svg>

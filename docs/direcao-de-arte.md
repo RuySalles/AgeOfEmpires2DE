@@ -16,14 +16,16 @@ As pranchas estão em `docs/pranchas/` e abrem com duplo clique (os dados vão e
 1. **A Árvore de Tecnologia** (interface do jogo) — `conceito-1.html`
 2. **A Crônica Iluminada** (artefato do mundo) — `conceito-2.html`
 3. **A Tapeçaria** (época e material) — `conceito-3.html`
+4. **A Árvore Bordada** (1 + 3, mais tapeçaria) — `conceito-4.html`
+5. **O Painel da Árvore** (1 + 3, mais árvore) — `conceito-5.html`
 
 ## Conceito escolhido
 
-**3 · A Tapeçaria**, escolhido pelo Ruy em 23/10/2026.
+**5 · O Painel da Árvore** (mistura de 1 e 3), escolhido pelo Ruy em 23/10/2026. Antes ele tinha escolhido o 3 (A Tapeçaria), aplicado e depois trocado: queria a estrutura da árvore com toques da tapeçaria.
 
-- **Objeto**: uma tapeçaria de linho pendurada no salão, como a de Bayeux.
-- **Peças**: topo = faixa com as 20 cenas (capítulos), que se enchem de lã conforme o progresso; capítulo = cena com legenda em maiúsculas; conquista = retalho com costura tracejada na cor de lã da raridade (anil épica, sálvia rara, ocre incomum, terracota comum); marcar = "Bordar"; progresso = o fio vermelho com a agulha na barra e as meadas de lã por raridade.
-- **Vocabulário**: Toda a tapeçaria / Por bordar / Bordadas, Fios soltos (perdíveis), Próximo ponto, Borde junto, Notas do bordador.
-- **Temas**: escuro "Salão à luz de tocha", claro "Linho cru".
-- **Fontes**: Metamorphous (legendas) + Spectral (texto).
-- **Momento de assinatura**: a costura do retalho fecha ao bordar e a cena do capítulo na faixa do topo se enche de lã até ficar bordada.
+- **Objeto**: a árvore de tecnologia do jogo; a tapeçaria é a crônica do avanço.
+- **Peças**: topo = barra de recursos com os números do 100% + trilho das quatro Eras (Trevas 0–25%, Feudal 25–50%, Castelos 50–75%, Imperial 75–100%) + a faixa da tapeçaria com uma cena por capítulo (enche de lã e fica bordada quando o capítulo é completado); capítulo = edifício com placa; conquista = nó com moldura na cor da raridade (roxo épica, azul rara, verde incomum, cinza comum) e ícone apagado até ser pesquisado; marcar = "Pesquisar".
+- **Vocabulário**: Tudo / A pesquisar / Pesquisadas, Próxima pesquisa, Pesquise junto, Ordem de pesquisa, Informações da árvore, Biblioteca.
+- **Temas**: escuro "Sala de guerra à noite", claro "Árvore impressa no manual".
+- **Fontes**: Marcellus SC (placas e títulos) + Source Sans 3 (texto) + Metamorphous (só a legenda da tapeçaria).
+- **Momento de assinatura**: ao pesquisar, a costura tracejada do nó fecha, o ícone recebe uma varredura dourada e ganha cor; a Era atual muda ao cruzar 25/50/75%; a cena do capítulo se enche de lã.
