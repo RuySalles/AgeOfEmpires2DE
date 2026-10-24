@@ -160,7 +160,7 @@ h1,h2,h3,.sc{font-family:"Marcellus SC",Georgia,serif;font-weight:400}
 .edificio[data-recolhido] .edificio-seta{transform:rotate(-90deg)}
 .edificio-nota{margin:14px 14px 0;padding:9px 12px;border-left:3px solid var(--azul);background:color-mix(in srgb,var(--azul) 10%,transparent);color:var(--suave);font-size:.94rem}
 .nos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding:16px 14px 18px}
-.no{position:relative;display:grid;grid-template-columns:68px minmax(0,1fr);gap:12px;align-content:start;padding:10px;background:var(--fundo);border:2px dashed var(--linha);border-radius:4px;transition:border-color .4s,box-shadow .4s}
+.no{position:relative;display:grid;grid-template-columns:68px minmax(0,1fr);grid-template-rows:1fr auto;align-items:start;gap:12px;padding:10px;background:var(--fundo);border:2px dashed var(--linha);border-radius:4px;transition:border-color .4s,box-shadow .4s}
 .no:not(:nth-child(3n)):after{content:"";position:absolute;top:44px;right:-20px;width:18px;border-top:2px solid var(--linha)}
 .no:last-child:after{display:none}
 .no[data-feita]{border-style:solid;border-color:var(--ouro);box-shadow:0 0 0 3px var(--fundo),0 0 0 5px color-mix(in srgb,var(--ouro) 40%,transparent)}
