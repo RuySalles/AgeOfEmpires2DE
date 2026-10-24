@@ -1,14 +1,13 @@
 // Checklist compartilhado: marca/salva itens, conta progresso por grupo, busca e filtra.
-// Cada página decide o formato do que salva (load/save) e o que fazer depois (onUpdate/afterFilter).
+// Fala com a página só por atributos: grupos recebem data-completo / data-recolhido,
+// itens fora do filtro recebem hidden. O visual de cada estado é do tema.
 import { norm, store, readJSON } from './util.js';
-import { setTopProgress } from './layout.js';
 
 /**
  * @param {object} o
  * @param {HTMLInputElement[]} o.boxes      checkboxes com data-id
  * @param {(box)=>Element} o.itemOf          elemento que some/aparece no filtro
- * @param {Element[]} o.groups               etapas/capítulos (recebem .complete e contagem)
- * @param {string} o.countSelector           onde escrever "feitas/total" dentro de cada grupo
+ * @param {Element[]} o.groups               etapas/capítulos (recebem data-completo e contagem)
  * @param {()=>Set<string>} o.load           ids salvos
  * @param {(ids:string[])=>void} o.save      grava os ids marcados
  * @param {(box)=>boolean} [o.keep]          filtro extra da página (ex.: ocultar concluídas)
@@ -27,13 +26,13 @@ export function createChecklist(o) {
   const groupBoxes = new Map(o.groups.map(g => [g, o.boxes.filter(b => g.contains(b))]));
 
   function update() {
-    const done = doneIn(o.boxes);
-    setTopProgress(o.boxes.length ? Math.round(done / o.boxes.length * 100) : 0);
     groupBoxes.forEach((bs, g) => {
       const d = doneIn(bs);
-      g.querySelector(o.countSelector).textContent = `${d}/${bs.length}`;
-      g.classList.toggle('complete', bs.length > 0 && d === bs.length);
+      g.querySelectorAll('[data-g="contagem"]').forEach(el => { el.textContent = `${d}/${bs.length}`; });
+      g.toggleAttribute('data-completo', bs.length > 0 && d === bs.length);
+      g.style.setProperty('--g-progresso', bs.length ? d / bs.length : 0);
     });
+    o.boxes.forEach(b => o.itemOf(b).toggleAttribute('data-feita', b.checked));
     o.save(o.boxes.filter(b => b.checked).map(b => b.dataset.id));
     if (o.onUpdate) o.onUpdate();
     filter();
@@ -78,32 +77,35 @@ export const storeAsMap = key => ({
 });
 
 /**
- * Grupos recolhíveis (clique, toque e teclado).
- * A página decide o estado padrão de cada grupo (isCollapsed) e guarda as escolhas do usuário (onToggle).
+ * Grupos recolhíveis (clique, toque e teclado). O cabeçalho clicável é [data-g="cabeca"];
+ * recolhido = atributo data-recolhido no grupo (motor.css esconde o [data-g="corpo"]).
  * @param {object} o
  * @param {Element[]} o.groups
- * @param {string} o.headSelector              cabeçalho clicável dentro de cada grupo
  * @param {(g:Element)=>boolean} o.isCollapsed estado de cada grupo ao (re)aplicar
  * @param {(g:Element, collapsed:boolean)=>void} [o.onToggle] quando o usuário abre/fecha um grupo
  */
-export function collapsible({ groups, headSelector, isCollapsed, onToggle }) {
+export function collapsible({ groups, isCollapsed, onToggle }) {
+  const head = g => g.querySelector('[data-g="cabeca"]');
   const show = (g, collapsed) => {
-    g.classList.toggle('collapsed', collapsed);
-    g.querySelector(headSelector).setAttribute('aria-expanded', String(!collapsed));
+    g.toggleAttribute('data-recolhido', collapsed);
+    if (head(g)) head(g).setAttribute('aria-expanded', String(!collapsed));
   };
   groups.forEach(g => {
-    const head = g.querySelector(headSelector);
-    head.setAttribute('role', 'button');
-    head.setAttribute('tabindex', '0');
-    const toggle = () => { const c = !g.classList.contains('collapsed'); show(g, c); if (onToggle) onToggle(g, c); };
-    head.addEventListener('click', toggle);
-    head.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+    const h = head(g);
+    if (!h) return;
+    if (!/^(BUTTON|SUMMARY)$/.test(h.tagName)) { h.setAttribute('role', 'button'); h.setAttribute('tabindex', '0'); }
+    const toggle = e => {
+      if (e.target.closest('a, input, label')) return;   // links e checkboxes dentro do cabeçalho continuam funcionando
+      const c = !g.hasAttribute('data-recolhido'); show(g, c); if (onToggle) onToggle(g, c);
+    };
+    h.addEventListener('click', toggle);
+    h.addEventListener('keydown', e => { if ((e.key === 'Enter' || e.key === ' ') && e.target === h) { e.preventDefault(); toggle(e); } });
   });
   const refresh = () => groups.forEach(g => show(g, isCollapsed(g)));
   refresh();
   return {
     refresh,                       // reaplica o estado padrão + escolhas salvas
     show,                          // muda só a tela, sem salvar (ex.: a busca abre etapas)
-    allOpen: (gs = groups) => gs.every(g => !g.classList.contains('collapsed')),
+    allOpen: (gs = groups) => gs.every(g => !g.hasAttribute('data-recolhido')),
   };
 }

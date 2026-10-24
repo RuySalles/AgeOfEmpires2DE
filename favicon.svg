@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- Ícone da aba: torre de castelo dourada sobre pedra escura (cores do tema escuro) -->
-  <rect width="64" height="64" rx="12" fill="#0f1114"/>
-  <path d="M32 5 59 32 32 59 5 32Z" fill="#1d2127" stroke="#e2b04a" stroke-width="3.5" stroke-linejoin="round"/>
-  <path d="M22 21h4v3h4v-3h4v3h4v-3h4v8l-3 3v9h3v4H22v-4h3v-9l-3-3Z" fill="#e2b04a"/>
+  <!-- Ícone da aba: troque as cores pelas do tema (--bg e --accent) e o símbolo pelo do jogo -->
+  <rect width="64" height="64" rx="12" fill="#0f1012"/>
+  <path d="M32 6 58 32 32 58 6 32Z" fill="#1c1f24" stroke="#e0a84a" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M32 19 35.5 28.5 45 32 35.5 35.5 32 45 28.5 35.5 19 32 28.5 28.5Z" fill="#e0a84a"/>
 </svg>

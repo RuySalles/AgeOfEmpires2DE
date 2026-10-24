@@ -34,13 +34,13 @@ export async function loadJSON(url) {
 
 // --- Destaque rápido ao pular para um item ---
 export function flash(el) {
-  el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash');
+  el.classList.remove('g-flash'); void el.offsetWidth; el.classList.add('g-flash');
 }
 
 // --- Mensagem quando os dados não carregam (ex.: arquivo aberto sem servidor) ---
 export function loadError(container, err) {
   console.error(err);
   container.hidden = false;
-  container.innerHTML = '<div class="empty-state"><strong>Não foi possível carregar o conteúdo.</strong>'
+  container.innerHTML = '<div class="g-erro"><strong>Não foi possível carregar o conteúdo.</strong>'
     + 'Recarregue a página. Se você abriu o arquivo direto do computador, rode um servidor local (veja o README).</div>';
 }

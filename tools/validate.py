@@ -6,7 +6,7 @@ Uso:
     python tools/validate.py --lock   # registra IDs novos em data/ids.lock.json
 
 Erros impedem a publicação (o check fica vermelho). Avisos apontam lacunas de conteúdo
-(dica sem fonte, tema ainda do modelo...) que não quebram o site.
+(dica sem fonte, tema ainda no esqueleto...) que não quebram o site.
 Só usa a biblioteca padrão do Python.
 """
 import json, re, sys
@@ -54,19 +54,50 @@ def check_refs(where, ids, valid, what):
     for x in ids:
         if x not in valid: err(f'{where}: "{x}" não existe em {what}')
 
-# ---------------------------------------------------------------- config
+# ---------------------------------------------------------------- config e tema
 def read_config():
-    cfg = (ROOT / 'assets/js/guia.config.js').read_text(encoding='utf-8')
+    cfg = (ROOT / 'assets/guia.config.js').read_text(encoding='utf-8')
     prefix = re.search(r"export const PREFIX = '([^']*)'", cfg)
     has_rota = re.search(r'export const HAS_ROTA = (true|false)', cfg)
     if not prefix or not re.fullmatch(r'[a-z][a-z0-9-]*', prefix.group(1)):
         err('guia.config.js: PREFIX deve ser curto, minúsculo e sem espaços (ex.: "hobbit")')
-    init = (ROOT / 'assets/js/theme-init.js').read_text(encoding='utf-8')
+    init = (ROOT / 'assets/motor/theme-init.js').read_text(encoding='utf-8')
     if prefix and f"'{prefix.group(1)}-theme'" not in init:
         err(f'theme-init.js: a chave do tema deve ser "{prefix.group(1)}-theme" (igual ao PREFIX de guia.config.js)')
-    if '/* TEMA-MODELO */' in (ROOT / 'assets/css/base.css').read_text(encoding='utf-8'):
-        warn('base.css: o tema ainda é o do modelo. Crie a paleta, as fontes e o ornamento deste jogo e apague a linha TEMA-MODELO.')
     return bool(has_rota and has_rota.group(1) == 'true')
+
+# Ganchos que o motor procura na página (HTML do tema) e no que o tema.js devolve.
+HOOKS_PAGE = {
+    'index.html': ['topo', 'rodape', 'capitulos', 'busca', 'filtro', 'proxima', 'vazio', 'fontes', 'confirmar'],
+    'rota.html': ['topo', 'rodape', 'etapas', 'abas', 'painel-rota', 'painel-ref', 'busca', 'proxima', 'vazio', 'fontes', 'confirmar'],
+}
+# Peças de identidade: o tema precisa desenhar estas (senão o guia sai com o esqueleto neutro do motor).
+PIECES = {
+    'conquistas': {'casca': [], 'conquista': ['data-g="conquista"', 'data-id'], 'capitulo': ['data-g="capitulo"', 'data-g="cabeca"', 'data-g="corpo"', 'data-g="contagem"'], 'progresso': []},
+    'rota': {'tarefa': ['data-g="tarefa"', 'data-id', 'data-g="como"'], 'etapa': ['data-g="etapa"', 'data-parte', 'data-g="cabeca"', 'data-g="corpo"', 'data-g="contagem"']},
+}
+def check_tema(has_rota):
+    css = (ROOT / 'assets/tema/tema.css').read_text(encoding='utf-8')
+    js = (ROOT / 'assets/tema/tema.js').read_text(encoding='utf-8')
+    for f in ['assets/tema/tema.css', 'assets/tema/tema.js', 'assets/tema/og.html', 'index.html'] + (['rota.html'] if has_rota else []):
+        if 'TEMA-ESQUELETO' in (ROOT / f).read_text(encoding='utf-8'):
+            warn(f'{f}: ainda é o esqueleto neutro (TEMA-ESQUELETO). O guia precisa do próprio front-end antes de publicar (references/direcao-de-arte.md).')
+    if '[data-theme="light"]' not in css or '[data-theme="dark"]' not in css:
+        err('tema.css: defina os dois temas, [data-theme="dark"] e [data-theme="light"]')
+    for page, hooks in HOOKS_PAGE.items():
+        if page == 'rota.html' and not has_rota: continue
+        html = (ROOT / page).read_text(encoding='utf-8')
+        for h in hooks:
+            if f'data-g="{h}"' not in html: err(f'{page}: falta o gancho data-g="{h}" (o motor precisa dele; veja references/motor.md)')
+    for grupo, pieces in PIECES.items():
+        if grupo == 'rota' and not has_rota: continue
+        for name, hooks in pieces.items():
+            m = re.search(rf'^\s*{name}\s*:', js, re.M)
+            if not m:
+                warn(f'tema.js: a peça "{name}" ainda usa o renderizador neutro do motor; desenhe-a no tema.')
+                continue
+            for h in hooks:
+                if h not in js: err(f'tema.js: "{name}" precisa manter o gancho {h} no HTML que devolve (veja references/motor.md)')
 
 def check_placeholders():
     for p in ROOT.rglob('*'):
@@ -205,14 +236,15 @@ def check_conquistas(d, src_ids, task_ids, has_rota):
 
 # ---------------------------------------------------------------- main
 def main():
-    for f in ['index.html', 'favicon.svg', 'assets/css/base.css', 'assets/css/conquistas.css', 'assets/js/guia.config.js', 'assets/js/theme-init.js',
-              'assets/js/lib/util.js', 'assets/js/lib/layout.js', 'assets/js/lib/checklist.js', 'assets/js/lib/fontes.js', 'assets/js/lib/save.js', 'assets/js/conquistas.js']:
+    for f in ['index.html', 'favicon.svg', 'assets/guia.config.js', 'assets/tema/tema.js', 'assets/tema/tema.css', 'assets/tema/og.html',
+              *[f'assets/motor/{m}' for m in ('theme-init.js', 'util.js', 'casca.js', 'checklist.js', 'fontes.js', 'save.js', 'padrao.js', 'conquistas.js', 'motor.css')]]:
         if not (ROOT / f).is_file(): err(f'arquivo obrigatório ausente: {f}')
     if errors: return report({})
     has_rota = read_config()
     check_placeholders()
+    check_tema(has_rota)
     if has_rota:
-        for f in ['rota.html', 'assets/css/rota.css', 'assets/js/rota.js']:
+        for f in ['rota.html', 'assets/motor/rota.js']:
             if not (ROOT / f).is_file(): err(f'HAS_ROTA = true, mas falta {f}')
 
     fontes = load('fontes.json')

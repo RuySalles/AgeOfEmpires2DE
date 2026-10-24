@@ -1,5 +1,5 @@
 // Aplica o tema salvo (ou o do sistema) antes da página ser pintada, para não "piscar".
-// Carregado sem defer no <head> de todas as páginas. A chave deve ser a mesma de guia.config.js.
+// Carregado sem defer no <head> de todas as páginas. A chave deve ser a mesma de assets/guia.config.js.
 (function () {
   var t = null;
   try { t = localStorage.getItem('aoe2-theme'); } catch (e) {}

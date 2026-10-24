@@ -1,0 +1,15 @@
+/* TEMA deste guia: TODO o visual mora aqui (paleta dos dois temas, fontes, layout, peças, texturas).
+   TEMA-ESQUELETO — apague esta linha quando o tema existir (o validador avisa enquanto ela estiver aqui).
+
+   Este arquivo vem quase vazio de propósito: o esqueleto só deixa a página legível enquanto o tema
+   não existe. NÃO o use como ponto de partida visual; comece da direção de arte do jogo
+   (references/direcao-de-arte.md). Regras fixas: dois temas ([data-theme="dark"] e [data-theme="light"]),
+   contraste mínimo 4,5:1, 375 px sem rolagem lateral, alvos de toque de 44 px. */
+
+:root,[data-theme="dark"]{--fundo:#202020;--texto:#ececec;color-scheme:dark}
+[data-theme="light"]{--fundo:#f4f4f4;--texto:#1d1d1d;color-scheme:light}
+body{margin:0 auto;max-width:960px;padding:0 16px;background:var(--fundo);color:var(--texto);font:16px/1.5 system-ui,sans-serif}
+a{color:inherit}
+button,input,summary{min-height:44px}
+[data-g="conquista"] img{vertical-align:middle}
+[data-feita]{opacity:.6}

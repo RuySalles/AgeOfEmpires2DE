@@ -5,12 +5,12 @@ Guia comunitário com **todas as conquistas da Steam** (dica de cada uma, perdí
 - Conquistas: https://ruysalles.github.io/AgeOfEmpires2DE/
 - Rota: https://ruysalles.github.io/AgeOfEmpires2DE/rota.html
 
-O site é estático (GitHub Pages, sem build). O **conteúdo** fica em arquivos JSON e o **layout** em HTML/CSS/JS. Para mudar um texto, você só mexe no JSON.
+O site é estático (GitHub Pages, sem build). O **conteúdo** fica em arquivos JSON, o **comportamento** no motor (igual em todos os guias) e o **visual** no tema deste guia. Para mudar um texto, você só mexe no JSON.
 
 ## Estrutura
 
 ```
-index.html              página de conquistas (a "casca": topo e recipientes vazios)
+index.html              página de conquistas (do TEMA: composição livre, com os ganchos data-g)
 rota.html               página da rota (idem; opcional)
 data/
   conquistas.json       ← conquistas: capítulos, dicas, perdíveis, roteiro, resumo do 100%
@@ -18,20 +18,18 @@ data/
   fontes.json           ← fontes citadas pelas dicas e tarefas + pontos a confirmar
   ids.lock.json         IDs já publicados (proteção do progresso salvo; veja abaixo)
 assets/
-  css/base.css          TEMA (tokens claro/escuro, fontes), topo, menu, componentes comuns
-  css/conquistas.css    estilos só das conquistas
-  css/rota.css          estilos só da rota (inclui a peça dos marcos, .marco)
-  js/guia.config.js     nome do jogo, marca, prefixo das chaves salvas, rodapé, HAS_ROTA
-  js/theme-init.js      aplica o tema antes de pintar a tela (evita "piscar")
-  js/lib/*.js           util, layout (topo/menu/rodapé), checklist, fontes, save (exportar/importar)
-  js/conquistas.js      monta as conquistas a partir de data/conquistas.json
-  js/rota.js            monta a rota a partir de data/rota.json
+  guia.config.js        nome do jogo, marca, prefixo das chaves salvas, rodapé, HAS_ROTA
+  motor/                MOTOR (igual em todos os guias; não editar aqui): checklist, filtros, busca,
+                        salvar/exportar, tema claro/escuro, renderizadores neutros, motor.css
+  tema/                 TEMA (único deste guia): tema.js (como cada peça é desenhada), tema.css
+                        (todo o visual), og.html (imagem de compartilhamento), imagens
   achievements/*.jpg    ícones das conquistas (nome = id da Steam em minúsculas)
+docs/                   direção de arte e pranchas de conceito (por que o visual é assim)
 tools/
-  validate.py           confere os dados (roda no GitHub a cada push)
+  validate.py           confere dados e ganchos do tema (roda no GitHub a cada push)
   steam_importar.py     traz conquistas, nomes em PT-BR e ícones da Steam (sem chave)
   update_steam.py       atualiza as % das conquistas (roda toda segunda no GitHub)
-  gerar_og.py           gera a imagem de compartilhamento a partir de tools/og/og-image.html
+  gerar_og.py           gera a imagem de compartilhamento a partir de assets/tema/og.html
 .github/workflows/      as automações
 ```
 
@@ -44,7 +42,7 @@ O progresso de cada visitante fica salvo no navegador dele, ligado ao **id** de 
 - **Tarefa que precisa sair** → apague-a da rota e acrescente o id em `aposentados` no `data/ids.lock.json`. Id aposentado nunca volta a ser usado.
 - Para registrar IDs novos: `python tools/validate.py --lock`.
 
-O prefixo das chaves no navegador (`PREFIX` em `assets/js/guia.config.js`) também nunca muda depois de publicar.
+O prefixo das chaves no navegador (`PREFIX` em `assets/guia.config.js`) também nunca muda depois de publicar.
 
 ## Como editar
 

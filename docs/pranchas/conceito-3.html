@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conceito 3 — A Tapeçaria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Spectral:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="prancha.css">
+<style>
+/* ===== Conceito 3: A Tapeçaria ===== */
+.t-escuro{ /* "Salão à luz de tocha" */
+  --parede:#16110c;--linho:#2a2218;--linho2:#332a1e;--fio:#eee2c9;--suave:#d8cbb1;--mudo:#b5a689;
+  --terracota:#e47f58;--ocre:#e5b552;--salvia:#a6ba73;--anil:#93a9dc;--trama:#ffffff08;
+}
+.t-claro{ /* "Linho cru" */
+  --parede:#d9cdb2;--linho:#f1e8d4;--linho2:#e7dcc3;--fio:#2c2418;--suave:#463a2b;--mudo:#675944;
+  --terracota:#9c3f26;--ocre:#7f5a0c;--salvia:#4c5b2b;--anil:#2e3f6b;--trama:#0000000a;
+}
+.c3{background:var(--parede);color:var(--fio);font:17px/1.55 Spectral,Georgia,serif;padding:24px 0 30px}
+.c3 *{box-sizing:border-box}
+/* textura de linho: trama em xadrez fino */
+.c3-tecido{background:repeating-linear-gradient(0deg,var(--trama) 0 1px,transparent 1px 4px),repeating-linear-gradient(90deg,var(--trama) 0 1px,transparent 1px 4px),var(--linho)}
+.c3-legenda{font-family:Metamorphous,serif;text-transform:uppercase;letter-spacing:.14em}
+/* A faixa da tapeçaria: os 20 capítulos como cenas, e o fio que borda o progresso */
+.c3-faixa{position:relative;padding:16px 24px 26px;border-block:6px double var(--terracota)}
+.c3-faixa h1{margin:0 0 4px;font-family:Metamorphous,serif;font-weight:400;font-size:clamp(1.6rem,4.6vw,2.9rem);line-height:1.1;letter-spacing:.04em}
+.c3-faixa h1 span{color:var(--terracota)}
+.c3-faixa p{margin:0 0 14px;color:var(--suave);max-width:640px}
+.c3-cenas{display:grid;grid-template-columns:repeat(20,minmax(0,1fr));gap:4px}
+.c3-cena{aspect-ratio:3/4;border:2px dashed var(--mudo);border-radius:3px;display:grid;place-items:end center;padding-bottom:3px;font:400 .7rem Metamorphous,serif;color:var(--mudo);background:linear-gradient(transparent 55%,var(--linho2) 55%)}
+.c3-cena:nth-child(4n+1){--c:var(--terracota)}.c3-cena:nth-child(4n+2){--c:var(--ocre)}.c3-cena:nth-child(4n+3){--c:var(--salvia)}.c3-cena:nth-child(4n){--c:var(--anil)}
+.c3-cena[data-bordada]{border-style:solid;border-color:var(--c);color:var(--fio);background:linear-gradient(160deg,color-mix(in srgb,var(--c) 30%,transparent),transparent 60%),linear-gradient(transparent 55%,color-mix(in srgb,var(--c) 22%,var(--linho2)) 55%)}
+.c3-cena[data-atual]{outline:2px solid var(--ocre);outline-offset:2px}
+.c3-fio{position:absolute;left:24px;right:24px;bottom:9px;height:4px}
+.c3-fio:before{content:"";position:absolute;inset:0;border-top:2px dashed color-mix(in srgb,var(--mudo) 60%,transparent)}
+.c3-fio i{position:absolute;left:0;top:-1px;height:4px;width:calc(var(--g-progresso,0)*100%);background:repeating-linear-gradient(90deg,var(--terracota) 0 10px,transparent 10px 14px);transition:width .8s}
+.c3-fio b{position:absolute;top:-9px;left:calc(var(--g-progresso,0)*100% - 6px);font-size:1rem;transition:left .8s}
+.c3-numeros{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px;font-size:.95rem;color:var(--mudo)}
+.c3-numeros b{color:var(--fio)}
+/* A cena do capítulo: legenda latina em cima, figuras (cartões) embaixo */
+.c3-cap{margin:22px 24px 0;border:2px solid var(--ocre);border-radius:4px;overflow:hidden}
+.c3-cap header{padding:10px 16px;background:var(--linho2);border-bottom:2px solid var(--ocre)}
+.c3-cap header small{display:block;font-size:.8rem;color:var(--terracota)}
+.c3-cap h2{margin:0;font:400 1.3rem/1.25 Metamorphous,serif;letter-spacing:.06em}
+.c3-cap header p{margin:2px 0 0;color:var(--mudo);font-style:italic;font-size:.95rem}
+.c3-pecas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;padding:16px}
+/* Cada conquista é um retalho bordado */
+.c3-peca{position:relative;padding:14px;border-radius:6px;border:2px dashed color-mix(in srgb,var(--cor) 55%,transparent);background:var(--linho);transition:border-color .4s,box-shadow .4s}
+[data-raridade="epic"]{--cor:var(--anil)}[data-raridade="rare"]{--cor:var(--salvia)}[data-raridade="uncommon"]{--cor:var(--ocre)}[data-raridade="common"]{--cor:var(--terracota)}
+.c3-peca[data-feita]{border-style:solid;border-color:var(--cor);box-shadow:0 0 0 4px var(--linho),0 0 0 6px color-mix(in srgb,var(--cor) 45%,transparent)}
+.c3-peca .cab{display:flex;gap:10px;align-items:center}
+.c3-peca img{width:52px;height:52px;border-radius:50%;border:2px solid var(--cor);filter:sepia(.4) saturate(.8)}
+.c3-peca h3{margin:0;font:400 1.02rem/1.25 Metamorphous,serif}
+.c3-peca .desc{margin:8px 0 6px;color:var(--mudo);font-style:italic;font-size:.92rem}
+.c3-peca .dica{margin:0;color:var(--suave);font-size:.95rem}
+.c3-peca .fios{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:.78rem}
+.c3-peca .fios span{border-bottom:2px dashed var(--cor);padding:0 2px;color:var(--mudo)}
+.c3-agulha{display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;margin-top:12px;border:2px dashed var(--cor);border-radius:4px;cursor:pointer;font:400 .85rem Metamorphous,serif;letter-spacing:.1em;text-transform:uppercase}
+.c3-agulha input{position:absolute;opacity:0;width:1px;height:1px}
+.c3-agulha:before{content:"🪡 Bordar"}
+.c3-peca[data-feita] .c3-agulha{border-style:solid;background:var(--cor);color:var(--linho)}
+.c3-peca[data-feita] .c3-agulha:before{content:"✚ Bordada"}
+.c3-agulha:focus-within{outline:2px solid var(--ocre);outline-offset:2px}
+@container (max-width:640px){
+  .c3-faixa{padding:14px 14px 26px}
+  .c3-cenas{grid-template-columns:repeat(10,minmax(0,1fr))}
+  .c3-fio{left:14px;right:14px}
+  .c3-cap{margin:18px 12px 0}
+  .c3-pecas{grid-template-columns:1fr;padding:12px}
+}
+</style>
+</head>
+<body>
+<div class="pr-wrap">
+ <div class="pr-head">
+  <div><h1>Conceito 3 · A Tapeçaria</h1>
+   <p><strong>O guia é uma tapeçaria bordada</strong>, como a de Bayeux (que narra Hastings, uma batalha do próprio jogo): o 100% é uma longa faixa de cenas que você vai bordando, uma conquista por vez.</p></div>
+  <div class="pr-nav"><a href="conceito-1.html">← Conceito 1</a><a href="conceito-2.html">← Conceito 2</a></div>
+ </div>
+
+ <div class="pr-grid">
+  <div class="pr-box">
+   <h2>O papel de cada peça</h2>
+   <table>
+    <tr><td>Página</td><td>Uma tapeçaria de linho pendurada no salão</td></tr>
+    <tr><td>Topo</td><td>A faixa com as 20 cenas (os capítulos); as já completas aparecem bordadas, a atual em destaque</td></tr>
+    <tr><td>Capítulo</td><td>Uma cena, com a legenda em maiúsculas por cima, como na tapeçaria</td></tr>
+    <tr><td>Conquista</td><td>Um retalho de linho com costura tracejada na cor de lã da raridade</td></tr>
+    <tr><td>Marcar</td><td>"Bordar": a costura tracejada vira um ponto contínuo e a peça ganha moldura</td></tr>
+    <tr><td>Progresso</td><td>O fio vermelho que corre pela barra da tapeçaria, com a agulha na ponta</td></tr>
+    <tr><td>Filtros</td><td>"Toda a tapeçaria / Por bordar / Bordadas"</td></tr>
+   </table>
+  </div>
+  <div class="pr-box">
+   <h2>Paleta e fontes</h2>
+   <b>Escuro · "Salão à luz de tocha"</b>
+   <div class="pr-sw"><span style="background:#16110c;color:#eee2c9">parede #16110c</span><span style="background:#2a2218;color:#eee2c9">linho #2a2218</span><span style="background:#e47f58">terracota #e47f58</span><span style="background:#e5b552">ocre #e5b552</span><span style="background:#93a9dc">anil #93a9dc</span></div>
+   <b>Claro · "Linho cru"</b>
+   <div class="pr-sw"><span style="background:#d9cdb2">parede #d9cdb2</span><span style="background:#f1e8d4">linho #f1e8d4</span><span style="background:#9c3f26;color:#fff">terracota #9c3f26</span><span style="background:#4c5b2b;color:#fff">sálvia #4c5b2b</span><span style="background:#2e3f6b;color:#fff">anil #2e3f6b</span></div>
+   <p style="margin:0"><span style="font:400 1.4rem Metamorphous,serif">Metamorphous</span> legendas em maiúsculas · <span style="font:400 1.05rem Spectral,serif">Spectral</span> texto corrido.</p>
+   <h2 style="margin-top:14px">Momento de assinatura</h2>
+   <p class="pr-note" style="margin:0">Ao marcar, a costura do retalho fecha e o fio da barra avança com a agulha; quando um capítulo inteiro é feito, a cena dele aparece bordada na faixa do topo. <b>Teste: clique em "Bordar".</b></p>
+  </div>
+ </div>
+
+ <div class="pr-label">Recorte real · tema escuro</div>
+ <div class="pr-frame"><div class="c3 t-escuro" data-quadro></div></div>
+ <div class="pr-label">Recorte real · tema claro</div>
+ <div class="pr-frame"><div class="c3 t-claro" data-quadro></div></div>
+ <div class="pr-label">Celular · 375 px</div>
+ <div class="pr-phones">
+  <div class="pr-phone"><div class="c3 t-escuro" data-quadro></div></div>
+  <div class="pr-phone"><div class="c3 t-claro" data-quadro></div></div>
+ </div>
+</div>
+<script type="module">
+import { montar } from './prancha.js';
+const roman = n => ['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV','XVI','XVII','XVIII','XIX','XX'][n - 1];
+const render = vm => `
+<section class="c3-faixa c3-tecido">
+ <div class="c3-legenda" style="font-size:.8rem;color:var(--terracota)">Hic incipit · aqui começa</div>
+ <h1>A tapeçaria das <span>${vm.total}</span> conquistas</h1>
+ <p>Age of Empires II, do jogo base às DLCs, bordado cena a cena com o atalho de cada feito.</p>
+ <div class="c3-cenas" aria-label="Capítulos">${Array.from({ length: vm.nCapitulos }, (_, i) => `<span class="c3-cena"${i < 5 ? ' data-bordada' : ''}${i === vm.capitulo.n - 1 ? ' data-atual' : ''} title="Capítulo ${roman(i + 1)}">${roman(i + 1)}</span>`).join('')}</div>
+ <div class="c3-fio" aria-hidden="true"><i></i><b>🪡</b></div>
+</section>
+<div class="c3-numeros" style="padding:0 24px"><span><b data-feitas></b> bordadas</span><span><b data-pct></b> da tapeçaria</span><span>dificuldade <b>${vm.overview.difficulty}/10</b></span><span><b>${vm.overview.hours}</b></span></div>
+<section class="c3-cap c3-tecido">
+ <header><small class="c3-legenda">Cena ${roman(vm.capitulo.n)} · 1 de ${vm.capitulo.total} bordadas</small><h2>${vm.capitulo.titulo}</h2><p>${vm.capitulo.subtitulo}</p></header>
+ <div class="c3-pecas">${vm.cards.map(c => `
+  <article class="c3-peca" data-card data-raridade="${c.raridade.chave}"${c.feita ? ' data-feita' : ''}>
+   <div class="cab"><img src="${c.icone}" alt=""><h3>${c.nome}</h3></div>
+   <p class="desc">“${c.desc}”</p>
+   <p class="dica">${c.dica}</p>
+   <div class="fios"><span>${c.raridade.rotulo} · ${c.raridade.pct}</span>${c.dificuldade ? `<span>dificuldade ${c.dificuldade}/5</span>` : ''}${c.tempo ? `<span>${c.tempo}</span>` : ''}</div>
+   <label class="c3-agulha"><input type="checkbox" aria-label="Bordar ${c.nome}"></label>
+  </article>`).join('')}
+ </div>
+</section>`;
+await montar({ render, capitulo: 'reis', ids: ['ACHIEVEMENT_CAMPAIGN_WALLACE_COMPLETED', 'ACHIEVEMENT_KUSHLUK_ASSASSINATION', 'ACHIEVEMENT_CATHEDRAL_RUSH'], feitas: ['ACHIEVEMENT_CAMPAIGN_WALLACE_COMPLETED'] });
+</script>
+</body>
+</html>

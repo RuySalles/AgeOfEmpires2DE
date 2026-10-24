@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0f1114">
+<meta name="theme-color" content="#202020">
 <title>Age of Empires II: Definitive Edition — Conquistas 100%</title>
-<meta name="description" content="As 370 conquistas de Age of Empires II: Definitive Edition, do jogo base às DLCs, com dica de cada uma, atalhos de escaramuça, roteiro do 100% e checklist com progresso salvo no navegador.">
+<meta name="description" content="Todas as conquistas de Age of Empires II: Definitive Edition com dica de como conseguir cada uma, perdíveis, raridade, roteiro do 100% e checklist com progresso salvo no navegador.">
 <link rel="canonical" href="https://ruysalles.github.io/AgeOfEmpires2DE/">
 
 <!-- Ícones da aba e da tela inicial -->
@@ -16,114 +16,69 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="AoE II · Guia 100%">
 <meta property="og:title" content="Age of Empires II: Definitive Edition — Conquistas 100%">
-<meta property="og:description" content="370 conquistas com dica e fonte, atalhos de escaramuça e checklist.">
+<meta property="og:description" content="Todas as conquistas com dica, perdíveis, raridade e checklist.">
 <meta property="og:url" content="https://ruysalles.github.io/AgeOfEmpires2DE/">
-<meta property="og:image" content="https://ruysalles.github.io/AgeOfEmpires2DE/og-image-2.jpg">
+<meta property="og:image" content="https://ruysalles.github.io/AgeOfEmpires2DE/og-image-1.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Age of Empires II: Definitive Edition — Guia de conquistas 100%">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Age of Empires II: Definitive Edition — Conquistas 100%">
-<meta name="twitter:image" content="https://ruysalles.github.io/AgeOfEmpires2DE/og-image-2.jpg">
+<meta name="twitter:image" content="https://ruysalles.github.io/AgeOfEmpires2DE/og-image-1.jpg">
 
-<script src="assets/js/theme-init.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Fontes do tema: troque junto com --font-display/--font-body em base.css -->
-<link href="https://fonts.googleapis.com/css2?family=Grenze:wght@500;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/conquistas.css">
+<script src="assets/motor/theme-init.js"></script>
+<!-- TEMA: fontes, folhas de estilo e arte são do guia (assets/tema/). O motor.css é só o mínimo funcional. -->
+<link rel="stylesheet" href="assets/motor/motor.css">
+<link rel="stylesheet" href="assets/tema/tema.css">
 </head>
-<body>
-<a class="skip" href="#conteudo">Pular para o conteúdo</a>
-<header class="topbar" id="topbar"></header>
-
-<main class="wrap" id="conteudo">
- <section class="hero">
-  <div>
-   <!-- Texto criativo do topo: escreva na voz do jogo (veja references/conteudo.md da skill) -->
-   <div class="eyebrow">Crônica de conquistas · Das Trevas à Imperial</div>
-   <h1><span id="achCount">0</span> conquistas.<br><em>Wololo até o fim.</em></h1>
-   <p class="lede" id="intro"></p>
-   <a class="backlink" id="rotaLink" href="rota.html">Ver a rota que acelera o 100% →</a>
-   <div class="ornament-line" aria-hidden="true"></div>
-  </div>
-  <aside class="panelbox panel" aria-label="Seu progresso">
-   <div class="ring">
-    <svg viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="ringGrad" x1="0" x2="1"><stop offset="0" stop-color="var(--special)"/><stop offset="1" stop-color="var(--accent)"/></linearGradient></defs><circle class="track" cx="60" cy="60" r="52"/><circle class="fill" id="ringFill" cx="60" cy="60" r="52"/></svg>
-    <div class="ring-label"><strong id="ringPct">0%</strong><span id="ringSub">0/0</span></div>
-   </div>
-   <ul class="rlist">
-    <li><span><i class="dot epic"></i>Épicas <small>(&lt;8%)</small></span><b id="r-epic">0/0</b></li>
-    <li><span><i class="dot rare"></i>Raras <small>(8–15%)</small></span><b id="r-rare">0/0</b></li>
-    <li><span><i class="dot uncommon"></i>Incomuns <small>(15–30%)</small></span><b id="r-uncommon">0/0</b></li>
-    <li><span><i class="dot common"></i>Comuns <small>(30%+)</small></span><b id="r-common">0/0</b></li>
-   </ul>
-   <p class="panel-note" id="panelNote"></p>
-  </aside>
+<body data-pagina="conquistas">
+<!--
+  TEMA-ESQUELETO — esqueleto neutro. Esta página é do TEMA: reescreva a composição inteira a partir da direção de arte
+  (references/direcao-de-arte.md). O que não pode faltar são os GANCHOS data-g abaixo (lista completa em
+  references/motor.md). Fora eles, qualquer estrutura, ordem, elemento ou texto serve.
+-->
+<a class="g-pular" href="#conteudo">Pular para o conteúdo</a>
+<header data-g="topo"></header>
+<main id="conteudo">
+ <section>
+  <h1><span data-g="total">0</span> conquistas de Age of Empires II: Definitive Edition</h1>
+  <p data-g="intro"></p>
+  <a data-g="link-rota" href="rota.html">Ver a rota</a>
+  <p data-g="progresso" aria-live="polite"></p>
+  <p data-g="nota-raridade"></p>
  </section>
 
- <!-- Resumo do 100%: dificuldade, tempo, jogadas, perdíveis (data/conquistas.json "overview") -->
- <section class="overview" id="overview" aria-label="Resumo do 100%" hidden>
-  <div class="ov-stats" id="ovStats"></div>
-  <p class="ov-summary" id="ovSummary"></p>
- </section>
+ <section data-g="sec-resumo" aria-label="Resumo do 100%"><div data-g="resumo"></div></section>
+ <section data-g="sec-roteiro" aria-label="Roteiro do 100%"><h2>Roteiro</h2><div data-g="roteiro"></div></section>
 
- <!-- Roteiro: a ordem inteligente de fazer tudo (data/conquistas.json "roadmap") -->
- <section class="strip" id="roadmap" aria-label="Roteiro do 100%" hidden>
-  <h2>Roteiro do 100%</h2>
-  <ol class="flow numbered" id="roadmapList"></ol>
- </section>
-
- <div class="toolbar">
-  <div class="toolrow">
-   <div class="segmented" role="group" aria-label="Filtrar conquistas">
-    <button type="button" data-filter="all" aria-pressed="true">Todas</button>
-    <button type="button" data-filter="pending" aria-pressed="false">Pendentes</button>
-    <button type="button" data-filter="done" aria-pressed="false">Concluídas</button>
-   </div>
-   <button class="btn" id="missableBtn" type="button" aria-pressed="false">⚠ Só perdíveis</button>
-  </div>
-  <div class="toolrow">
-   <label class="search">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-    <input type="search" id="searchInput" placeholder="Buscar conquista ou dica… (ex.: chefe, coop, épica)" aria-label="Buscar conquista">
-   </label>
-   <button class="btn btn-accent" id="continueBtn" type="button">Próxima pendente →</button>
-   <details class="moremenu" id="moreMenu">
-    <summary class="btn" aria-label="Mais opções">⋯</summary>
-    <div class="moremenu-list">
-     <button type="button" id="spoilerBtn" aria-pressed="false">Mostrar spoilers</button>
-     <button type="button" id="printBtn">Imprimir / PDF</button>
-     <button type="button" id="exportBtn">Exportar progresso (.json)</button>
-     <button type="button" id="importBtn">Importar progresso</button>
-     <button type="button" id="resetBtn" class="danger">Zerar checklist</button>
-    </div>
-   </details>
-  </div>
+ <div role="toolbar" aria-label="Filtros">
+  <button type="button" data-g="filtro" data-filtro="all" aria-pressed="true">Todas</button>
+  <button type="button" data-g="filtro" data-filtro="pending" aria-pressed="false">Pendentes</button>
+  <button type="button" data-g="filtro" data-filtro="done" aria-pressed="false">Concluídas</button>
+  <button type="button" data-g="perdiveis" aria-pressed="false">Só perdíveis</button>
+  <input type="search" data-g="busca" placeholder="Buscar conquista ou dica…" aria-label="Buscar conquista">
+  <button type="button" data-g="proxima">Próxima pendente</button>
+  <details data-g="menu-mais">
+   <summary>Mais opções</summary>
+   <button type="button" data-g="spoilers" aria-pressed="false">Mostrar spoilers</button>
+   <button type="button" data-g="imprimir">Imprimir / PDF</button>
+   <button type="button" data-g="exportar">Exportar progresso</button>
+   <button type="button" data-g="importar">Importar progresso</button>
+   <button type="button" data-g="zerar">Zerar checklist</button>
+  </details>
  </div>
 
-<!-- capítulos são montados por assets/js/conquistas.js a partir de data/conquistas.json -->
- <div id="chapters"></div>
- <div class="empty-state" id="emptyState" hidden><strong>Nada por aqui.</strong>Nenhuma conquista corresponde à busca ou ao filtro atual.</div>
+ <div data-g="capitulos"></div>
+ <p data-g="vazio" hidden>Nenhuma conquista corresponde à busca ou ao filtro.</p>
 
- <section class="sources" id="fontes">
-  <div class="sectionhead"><div><h2>Fontes e pontos a confirmar</h2><p>Guias consultados para escrever as dicas. Cada dica cita as suas.</p></div></div>
-  <details class="fold" open>
-   <summary>Fontes <span class="tabcount" id="sourceCount"></span></summary>
-   <ul id="sourceList"></ul>
-   <p class="fold-note">As dicas foram resumidas com palavras próprias a partir dessas fontes e do que foi testado jogando.</p>
-  </details>
-  <details class="fold fold-warn" id="confirmFold">
-   <summary>Pontos a confirmar no jogo <span class="tabcount" id="confirmCount"></span></summary>
-   <ul id="confirmList"></ul>
-  </details>
+ <section aria-label="Fontes">
+  <h2>Fontes (<span data-g="total-fontes"></span>)</h2>
+  <div data-g="fontes"></div>
+  <div data-g="sec-confirmar"><h3>Pontos a confirmar (<span data-g="total-confirmar"></span>)</h3><div data-g="confirmar"></div></div>
  </section>
- <footer id="footer"></footer>
 </main>
-
-<script type="module" src="assets/js/conquistas.js"></script>
+<footer data-g="rodape"></footer>
+<script type="module" src="assets/motor/conquistas.js"></script>
 </body>
 </html>

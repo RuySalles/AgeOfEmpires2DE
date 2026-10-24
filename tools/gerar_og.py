@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Gera a imagem de compartilhamento (WhatsApp, Discord...) a partir de tools/og/og-image.html.
+"""Gera a imagem de compartilhamento (WhatsApp, Discord...) a partir de assets/tema/og.html (parte do tema).
 
 Uso:
     python tools/gerar_og.py
@@ -56,7 +56,7 @@ def main():
     handler = functools.partial(QuietHandler, directory=str(ROOT))
     with socketserver.TCPServer(('127.0.0.1', 0), handler) as srv:
         threading.Thread(target=srv.serve_forever, daemon=True).start()
-        url = f'http://127.0.0.1:{srv.server_address[1]}/tools/og/og-image.html'
+        url = f'http://127.0.0.1:{srv.server_address[1]}/assets/tema/og.html'
         png = ROOT / 'og.png'
         subprocess.run([browser(), '--headless=new', '--hide-scrollbars', '--force-device-scale-factor=1', '--window-size=1200,630',
                         '--virtual-time-budget=8000', f'--screenshot={png}', url], check=True, capture_output=True)

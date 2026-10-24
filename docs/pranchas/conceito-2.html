@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conceito 2 — A Crônica Iluminada</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="prancha.css">
+<style>
+/* ===== Conceito 2: A Crônica Iluminada ===== */
+.t-escuro{ /* "Scriptorium à luz de vela" */
+  --mesa:#140f0a;--folha:#211910;--folha2:#2a2016;--tinta:#ecdfc5;--suave:#d6c7aa;--mudo:#b3a185;--rubrica:#ec7a64;--lapis:#8fb0ef;--ouro:#e8c15e;--ouro2:#a87f22;--verde:#9cc48a;
+  --sombra:0 20px 60px #0009;--veio:#e8c15e;
+}
+.t-claro{ /* "Velino" */
+  --mesa:#d8cbad;--folha:#f5ecd6;--folha2:#ecdfc2;--tinta:#2b2116;--suave:#43362a;--mudo:#6b5a43;--rubrica:#a1281b;--lapis:#2b4c8c;--ouro:#9a6a12;--ouro2:#d9b25a;--verde:#3e6a2e;
+  --sombra:0 20px 50px #5a462822;--veio:#9a6a12;
+}
+.c2{background:radial-gradient(ellipse at 50% 0%,#ffffff0d,transparent 60%),var(--mesa);color:var(--tinta);font:18px/1.6 "EB Garamond",Georgia,serif;padding:34px 20px}
+.c2 *{box-sizing:border-box}
+.c2-folio{position:relative;max-width:820px;margin:0 auto;background:linear-gradient(90deg,#0000 0,#00000010 2%,#0000 6%,#0000 94%,#00000010 98%,#0000),var(--folha);box-shadow:var(--sombra);padding:44px 70px 50px 110px;border-radius:2px}
+/* A margem iluminada: um ramo dourado que cresce com o progresso */
+.c2-margem{position:absolute;left:34px;top:44px;bottom:50px;width:34px}
+.c2-margem:before{content:"";position:absolute;left:15px;top:0;bottom:0;border-left:2px dotted color-mix(in srgb,var(--veio) 40%,transparent)}
+.c2-margem i{position:absolute;left:12px;top:0;width:8px;height:calc(var(--g-progresso,0)*100%);border-radius:4px;background:linear-gradient(var(--ouro),var(--ouro2),var(--ouro));box-shadow:0 0 10px color-mix(in srgb,var(--ouro) 50%,transparent);transition:height .8s}
+.c2-margem b{position:absolute;left:-2px;top:calc(var(--g-progresso,0)*100% - 18px);font:400 1.6rem "Uncial Antiqua",serif;color:var(--ouro);transition:top .8s}
+/* Folha de rosto */
+.c2-rosto{text-align:center;border-bottom:1px solid color-mix(in srgb,var(--tinta) 25%,transparent);padding-bottom:22px;margin-bottom:26px}
+.c2-rosto small{display:block;color:var(--rubrica);font:400 .95rem "Almendra",serif;letter-spacing:.18em;text-transform:uppercase}
+.c2-rosto h1{font:700 clamp(2rem,5.4vw,3.4rem)/1.05 "Almendra",serif;margin:10px 0 8px}
+.c2-rosto h1 span{color:var(--rubrica)}
+.c2-rosto p{margin:0 auto;max-width:520px;color:var(--suave);font-style:italic}
+.c2-selo{display:inline-flex;gap:18px;margin-top:14px;color:var(--mudo);font-size:.95rem}
+.c2-selo b{color:var(--tinta)}
+/* Capítulo */
+.c2-cap h2{font:700 1.5rem/1.2 "Almendra",serif;margin:0;color:var(--tinta)}
+.c2-cap h2 small{display:block;color:var(--rubrica);font:400 .9rem "Almendra",serif;letter-spacing:.16em;text-transform:uppercase}
+.c2-cap .sub{color:var(--mudo);font-style:italic;margin:2px 0 18px}
+/* Verbetes */
+.c2-verbete{position:relative;padding:14px 0 18px;border-top:1px solid color-mix(in srgb,var(--tinta) 14%,transparent)}
+.c2-verbete .icone{position:absolute;left:-84px;top:16px;width:52px;height:52px;border-radius:50%;overflow:hidden;border:2px solid color-mix(in srgb,var(--ouro) 70%,transparent);box-shadow:0 0 0 4px var(--folha),0 0 0 5px color-mix(in srgb,var(--ouro) 40%,transparent)}
+.c2-verbete .icone img{width:100%;height:100%;display:block;filter:sepia(.35)}
+.c2-verbete h3{margin:0;font:700 1.25rem/1.25 "Almendra",serif;color:var(--rubrica)}
+.c2-capitular{float:left;font:400 3.1rem/0.9 "Uncial Antiqua",serif;color:var(--lapis);margin:6px 10px 0 0;padding:6px 8px 4px;border:1px solid color-mix(in srgb,var(--lapis) 40%,transparent);background:color-mix(in srgb,var(--lapis) 9%,transparent);transition:color .5s,background .5s,border-color .5s}
+.c2-verbete[data-feita] .c2-capitular{color:var(--folha);background:linear-gradient(135deg,var(--ouro2),var(--ouro) 45%,var(--ouro2));border-color:var(--ouro)}
+.c2-verbete .desc{margin:2px 0 6px;color:var(--mudo);font-style:italic;font-size:1rem}
+.c2-verbete .dica{margin:0;color:var(--suave)}
+.c2-nota{display:flex;flex-wrap:wrap;gap:4px 14px;clear:both;margin-top:8px;font-size:.9rem;color:var(--mudo)}
+.c2-nota .rar{color:var(--rubrica)}
+/* O lacre: o checkbox */
+.c2-lacre{position:absolute;right:-50px;top:14px;width:44px;height:44px;border-radius:50%;border:2px dashed color-mix(in srgb,var(--rubrica) 60%,transparent);display:grid;place-items:center;cursor:pointer}
+.c2-lacre input{position:absolute;opacity:0;width:1px;height:1px}
+.c2-lacre:before{content:"";color:#fff;font:700 1.1rem "Almendra",serif}
+.c2-verbete[data-feita] .c2-lacre{border:0;background:radial-gradient(circle at 35% 30%,#e0675a,#a3261b 55%,#6e140c);box-shadow:0 3px 8px #0006,inset 0 0 0 4px #ffffff1f;animation:c2-lacre .35s ease-out}
+.c2-verbete[data-feita] .c2-lacre:before{content:"✠"}
+.c2-lacre:focus-within{outline:2px solid var(--rubrica);outline-offset:3px}
+@keyframes c2-lacre{0%{transform:scale(1.6) rotate(-20deg);opacity:0}100%{transform:none;opacity:1}}
+@container (max-width:640px){
+  .c2{padding:16px 0;font-size:17px}
+  .c2-folio{padding:26px 18px 30px 46px}
+  .c2-margem{left:10px;top:26px;bottom:30px;width:24px}
+  .c2-margem:before{left:10px}.c2-margem i{left:7px}.c2-margem b{left:-4px;font-size:1.2rem}
+  .c2-verbete .icone{position:static;float:right;width:44px;height:44px;margin:0 0 6px 10px;box-shadow:none}
+  .c2-lacre{position:relative;right:auto;top:auto;margin-top:10px}
+}
+</style>
+</head>
+<body>
+<div class="pr-wrap">
+ <div class="pr-head">
+  <div><h1>Conceito 2 · A Crônica Iluminada</h1>
+   <p><strong>O guia é a crônica de um monge copista</strong> que registra os feitos do jogador: cada conquista é um verbete com letra capitular, cada capítulo um livro da crônica. Marcar é lacrar o verbete.</p></div>
+  <div class="pr-nav"><a href="conceito-1.html">← Conceito 1</a><a href="conceito-3.html">Conceito 3 →</a></div>
+ </div>
+
+ <div class="pr-grid">
+  <div class="pr-box">
+   <h2>O papel de cada peça</h2>
+   <table>
+    <tr><td>Página</td><td>Um fólio de manuscrito sobre a mesa do scriptorium, coluna única com margens largas</td></tr>
+    <tr><td>Topo</td><td>Folha de rosto: "Crônica das 370 Conquistas", com rubrica em vermelho</td></tr>
+    <tr><td>Capítulo</td><td>"Livro VI": título em letra de copista e subtítulo em itálico</td></tr>
+    <tr><td>Conquista</td><td>Um verbete (sem caixa!): capitular em lápis-lazúli, nome em vermelho, ícone num medalhão na margem</td></tr>
+    <tr><td>Marcar</td><td>O lacre de cera vermelha na margem direita</td></tr>
+    <tr><td>Progresso</td><td>Um ramo dourado que cresce pela margem esquerda, de cima a baixo</td></tr>
+    <tr><td>Filtros</td><td>"Todos os feitos / Por registrar / Lacrados", como marcadores de fita</td></tr>
+   </table>
+  </div>
+  <div class="pr-box">
+   <h2>Paleta e fontes</h2>
+   <b>Escuro · "Scriptorium à luz de vela"</b>
+   <div class="pr-sw"><span style="background:#140f0a;color:#ecdfc5">mesa #140f0a</span><span style="background:#211910;color:#ecdfc5">folha #211910</span><span style="background:#ec7a64">rubrica #ec7a64</span><span style="background:#8fb0ef">lápis #8fb0ef</span><span style="background:#e8c15e">ouro #e8c15e</span></div>
+   <b>Claro · "Velino"</b>
+   <div class="pr-sw"><span style="background:#d8cbad">mesa #d8cbad</span><span style="background:#f5ecd6">folha #f5ecd6</span><span style="background:#a1281b;color:#fff">rubrica #a1281b</span><span style="background:#2b4c8c;color:#fff">lápis #2b4c8c</span><span style="background:#9a6a12;color:#fff">ouro #9a6a12</span></div>
+   <p style="margin:0"><span style="font:700 1.4rem Almendra,serif">Almendra</span> títulos de copista · <span style="font:400 1.3rem 'Uncial Antiqua',serif">Uncial</span> só nas capitulares · <span style="font:400 1.05rem 'EB Garamond',serif">EB Garamond</span> texto corrido.</p>
+   <h2 style="margin-top:14px">Momento de assinatura</h2>
+   <p class="pr-note" style="margin:0">Ao marcar, o lacre de cera cai na margem e a letra capitular do verbete recebe folha de ouro; o ramo dourado da margem cresce. <b>Teste: clique nos círculos tracejados.</b></p>
+  </div>
+ </div>
+
+ <div class="pr-label">Recorte real · tema escuro</div>
+ <div class="pr-frame"><div class="c2 t-escuro" data-quadro></div></div>
+ <div class="pr-label">Recorte real · tema claro</div>
+ <div class="pr-frame"><div class="c2 t-claro" data-quadro></div></div>
+ <div class="pr-label">Celular · 375 px</div>
+ <div class="pr-phones">
+  <div class="pr-phone"><div class="c2 t-escuro" data-quadro></div></div>
+  <div class="pr-phone"><div class="c2 t-claro" data-quadro></div></div>
+ </div>
+</div>
+<script type="module">
+import { montar } from './prancha.js';
+const roman = n => ['I','II','III','IV','V','VI','VII','VIII','IX','X'][n - 1];
+const render = vm => `
+<article class="c2-folio">
+ <div class="c2-margem" aria-hidden="true"><i></i><b>❦</b></div>
+ <header class="c2-rosto">
+  <small>Aqui começa a</small>
+  <h1>Crônica das <span>${vm.total}</span> Conquistas</h1>
+  <p>Em que se registram, livro a livro, os feitos de Age of Empires II: do jogo base às DLCs, com o atalho de cada um.</p>
+  <div class="c2-selo"><span><b data-feitas></b> feitos lacrados</span><span><b data-pct></b> da crônica</span><span>${vm.nCapitulos} livros</span></div>
+ </header>
+ <section class="c2-cap">
+  <h2><small>Livro ${roman(vm.capitulo.n)} · 1 de ${vm.capitulo.total} lacrados</small>${vm.capitulo.titulo}</h2>
+  <p class="sub">${vm.capitulo.subtitulo}</p>
+  ${vm.cards.map(c => `
+  <div class="c2-verbete" data-card${c.feita ? ' data-feita' : ''}>
+   <span class="icone"><img src="${c.icone}" alt=""></span>
+   <span class="c2-capitular" aria-hidden="true">${c.nome.charAt(0)}</span>
+   <h3>${c.nome.slice(1)}</h3>
+   <p class="desc">“${c.desc}”</p>
+   <p class="dica">${c.dica}</p>
+   <div class="c2-nota"><span class="rar">${c.raridade.rotulo}, ${c.raridade.pct} dos jogadores</span>${c.dificuldade ? `<span>Dificuldade ${c.dificuldade} de 5</span>` : ''}${c.tempo ? `<span>${c.tempo}</span>` : ''}</div>
+   <label class="c2-lacre"><input type="checkbox" aria-label="Lacrar ${c.nome}"></label>
+  </div>`).join('')}
+ </section>
+</article>`;
+await montar({ render, capitulo: 'reis', ids: ['ACHIEVEMENT_CAMPAIGN_WALLACE_COMPLETED', 'ACHIEVEMENT_KUSHLUK_ASSASSINATION', 'ACHIEVEMENT_CATHEDRAL_RUSH'], feitas: ['ACHIEVEMENT_CAMPAIGN_WALLACE_COMPLETED'] });
+</script>
+</body>
+</html>
