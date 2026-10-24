@@ -126,8 +126,10 @@
   <div class="pr-phone"><div class="c1 t-claro" data-quadro></div></div>
  </div>
 </div>
-<script type="module">
-import { montar } from './prancha.js';
+<script src="dados.js"></script>
+<script src="prancha.js"></script>
+<script>
+(async () => {
 const ERAS = [['Era das Trevas', 0], ['Era Feudal', .25], ['Era dos Castelos', .5], ['Era Imperial', .75]];
 const render = vm => `
 <section class="c1-topo">
@@ -157,6 +159,7 @@ document.querySelectorAll('[data-quadro]').forEach(q => {
   q.addEventListener('progresso', e => set(e.detail));
   set(+getComputedStyle(q).getPropertyValue('--g-progresso') || 0);
 });
+})();
 </script>
 </body>
 </html>

@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 <!--
-  Imagem de compartilhamento (og-image-N.jpg, 1200×630), parte do TEMA: desenhe-a com a mesma
-  direção de arte das páginas (ela é a "capa" do guia no WhatsApp/Discord).
-  TEMA-ESQUELETO — apague esta linha quando a arte existir.
-  Gerar: python tools/gerar_og.py. Os números vêm de data/*.json, para não ficar desatualizada.
+  Imagem de compartilhamento (og-image-N.jpg, 1200×630) do tema "A Tapeçaria".
+  Gerar: python tools/gerar_og.py. Os números vêm de data/*.json.
 -->
 <html lang="pt-BR" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="tema.css">
+<link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Spectral:wght@400;500&display=block" rel="stylesheet">
 <style>
-  *{box-sizing:border-box;margin:0}
-  html,body{width:1200px;height:630px;overflow:hidden;max-width:none;padding:0}
-  .card{width:1200px;height:630px;padding:70px;display:flex;flex-direction:column;justify-content:center;gap:20px;font:28px/1.3 system-ui,sans-serif}
-  h1{font-size:80px;line-height:1}
+  html,body{width:1200px;height:630px;overflow:hidden;margin:0}
+  body{background:var(--parede)}
+  .card{position:relative;width:1200px;height:630px;padding:40px 56px}
+  .pano{height:100%;padding:34px 44px;box-shadow:var(--sombra)}
+  .legenda{color:var(--terracota);font-size:20px;margin:0}
+  h1{margin:10px 0 12px;font-size:78px;line-height:1.02;letter-spacing:.02em}
+  h1 em{font-style:normal;color:var(--terracota)}
+  .sub{margin:0;font-size:27px;color:var(--suave);max-width:900px;line-height:1.3}
+  .cenas{position:absolute;left:100px;right:100px;bottom:96px;gap:8px}
+  .mini-cena{font-size:15px}
+  .fio{left:100px;right:100px;bottom:72px}
+  .meadas{margin-top:22px;gap:12px}
+  .meada{font-size:18px}
 </style>
 </head>
 <body>
 <div class="card">
-  <p id="game"></p>
-  <h1><span id="count">0</span> conquistas</h1>
-  <p id="numeros"></p>
+ <div class="pano tecido bainha">
+  <p class="legenda">Hic incipit · Age of Empires II: Definitive Edition</p>
+  <h1>A tapeçaria das<br><em><span id="count">370</span> conquistas</em></h1>
+  <p class="sub">Dica e fonte para cada uma, do jogo base às DLCs, bordadas cena a cena.</p>
+  <div class="meadas">
+   <span class="meada" data-raridade="epic"><i></i>Anil · <b id="epic">0</b> épicas</span>
+   <span class="meada" data-raridade="rare"><i></i>Sálvia · <b id="rare">0</b> raras</span>
+   <span class="meada" data-raridade="uncommon"><i></i>Ocre · <b id="uncommon">0</b> incomuns</span>
+   <span class="meada" data-raridade="common"><i></i>Terracota · <b id="common">0</b> comuns</span>
+  </div>
+  <div class="cenas" id="cenas"></div>
+  <div class="fio" style="--g-progresso:.32"><i></i><b>🪡</b></div>
+ </div>
 </div>
 <script type="module">
-  import { GAME, HAS_ROTA } from '../guia.config.js';
-  const $ = id => document.getElementById(id);
-  $('game').textContent = GAME + ' · Guia de conquistas';
   const conq = await fetch('../../data/conquistas.json').then(r => r.json());
-  const ids = Object.keys(conq.achievements);
-  $('count').textContent = ids.length;
-  const n = [`${conq.chapters.length} capítulos`];
-  const missable = ids.filter(id => conq.achievements[id].missable).length;
-  if (missable) n.push(`${missable} ${missable === 1 ? 'perdível' : 'perdíveis'}`);
-  if (HAS_ROTA) {
-    const rota = await fetch('../../data/rota.json').then(r => r.json()).catch(() => null);
-    if (rota) n.push(`${rota.stages.reduce((a, s) => a + s.tasks.length, 0)} tarefas na rota`);
-  }
-  $('numeros').textContent = n.join(' · ');
+  const a = Object.values(conq.achievements);
+  document.getElementById('count').textContent = a.length;
+  const faixa = p => p < 8 ? 'epic' : p < 15 ? 'rare' : p < 30 ? 'uncommon' : 'common';
+  ['epic', 'rare', 'uncommon', 'common'].forEach(k => { document.getElementById(k).textContent = a.filter(x => faixa(x.pct) === k).length; });
+  const R = ['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV','XVI','XVII','XVIII','XIX','XX'];
+  document.getElementById('cenas').innerHTML = conq.chapters.map((c, i) =>
+    `<span class="mini-cena"${i < 6 ? ' data-bordada style="--g-progresso:1"' : ''}${i === 6 ? ' data-atual style="--g-progresso:.4"' : ''}><span>${R[i] || i + 1}</span></span>`).join('');
 </script>
 </body>
 </html>

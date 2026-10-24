@@ -1,15 +1,216 @@
-/* TEMA deste guia: TODO o visual mora aqui (paleta dos dois temas, fontes, layout, peças, texturas).
-   TEMA-ESQUELETO — apague esta linha quando o tema existir (o validador avisa enquanto ela estiver aqui).
+/* TEMA do guia de Age of Empires II: DE — "A Tapeçaria".
+   A página é uma tapeçaria de linho pendurada no salão: faixa de cenas no topo, retalhos bordados,
+   costura tracejada que fecha ao marcar, fio vermelho com agulha marcando o progresso.
+   Fontes: Metamorphous (legendas, em maiúsculas como na tapeçaria de Bayeux) + Spectral (texto). */
 
-   Este arquivo vem quase vazio de propósito: o esqueleto só deixa a página legível enquanto o tema
-   não existe. NÃO o use como ponto de partida visual; comece da direção de arte do jogo
-   (references/direcao-de-arte.md). Regras fixas: dois temas ([data-theme="dark"] e [data-theme="light"]),
-   contraste mínimo 4,5:1, 375 px sem rolagem lateral, alvos de toque de 44 px. */
+/* =========================================================
+   Escuro: "Salão à luz de tocha"
+   ========================================================= */
+:root,[data-theme="dark"]{
+  --parede:#16110c;--parede-luz:#3a2612;--linho:#2a2218;--linho2:#332a1e;--linho3:#3d3224;
+  --fio:#eee2c9;--suave:#d8cbb1;--mudo:#b5a689;
+  --terracota:#e47f58;--ocre:#e5b552;--salvia:#a6ba73;--anil:#93a9dc;
+  --tinta-sobre-la:#1b140d;
+  --trama:#ffffff07;--sombra:0 16px 40px #0008;
+  color-scheme:dark;
+}
+/* =========================================================
+   Claro: "Linho cru"
+   ========================================================= */
+[data-theme="light"]{
+  --parede:#d9cdb2;--parede-luz:#efe3c6;--linho:#f1e8d4;--linho2:#e7dcc3;--linho3:#ddd0b4;
+  --fio:#2c2418;--suave:#463a2b;--mudo:#675944;
+  --terracota:#9c3f26;--ocre:#7f5a0c;--salvia:#4c5b2b;--anil:#2e3f6b;
+  --tinta-sobre-la:#fbf5e8;
+  --trama:#0000000a;--sombra:0 14px 34px #5a462826;
+  color-scheme:light;
+}
+[data-raridade="epic"]{--cor:var(--anil)}
+[data-raridade="rare"]{--cor:var(--salvia)}
+[data-raridade="uncommon"]{--cor:var(--ocre)}
+[data-raridade="common"]{--cor:var(--terracota)}
 
-:root,[data-theme="dark"]{--fundo:#202020;--texto:#ececec;color-scheme:dark}
-[data-theme="light"]{--fundo:#f4f4f4;--texto:#1d1d1d;color-scheme:light}
-body{margin:0 auto;max-width:960px;padding:0 16px;background:var(--fundo);color:var(--texto);font:16px/1.5 system-ui,sans-serif}
-a{color:inherit}
-button,input,summary{min-height:44px}
-[data-g="conquista"] img{vertical-align:middle}
-[data-feita]{opacity:.6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(ellipse at 50% -10%,var(--parede-luz) 0,transparent 42rem),var(--parede);color:var(--fio);font:17px/1.6 Spectral,Georgia,serif}
+a{color:var(--terracota);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--fio)}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--ocre);outline-offset:3px}
+.legenda,.marca,.botao-tema,.nav a,h1,h2,h3,.ferramentas button,.ferramentas summary{font-family:Metamorphous,Georgia,serif;font-weight:400}
+.legenda{text-transform:uppercase;letter-spacing:.14em}
+.miolo{width:min(100% - 32px,1180px);margin-inline:auto}
+.g-pular{background:var(--linho);color:var(--fio);padding:10px 14px;border-radius:6px}
+/* textura de linho: trama em xadrez fino */
+.tecido{background:repeating-linear-gradient(0deg,var(--trama) 0 1px,transparent 1px 4px),repeating-linear-gradient(90deg,var(--trama) 0 1px,transparent 1px 4px),var(--linho)}
+/* borda bordada da tapeçaria: barra dupla terracota com pontos ocre */
+.bainha{border-block:6px double var(--terracota);position:relative}
+.bainha:before,.bainha:after{content:"";position:absolute;left:0;right:0;height:2px;background:repeating-linear-gradient(90deg,var(--ocre) 0 6px,transparent 6px 14px)}
+.bainha:before{top:4px}.bainha:after{bottom:4px}
+
+/* =========================================================
+   Topo: barra bordada
+   ========================================================= */
+[data-g="topo"]{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--parede) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:3px double var(--terracota)}
+.barra{width:min(100% - 32px,1180px);margin-inline:auto;min-height:60px;display:flex;align-items:center;gap:14px}
+.marca{display:flex;align-items:center;gap:10px;color:var(--fio);text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font-size:.92rem;min-width:0;flex:1}
+.marca>span:last-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.marca-no{flex:none;width:34px;height:34px;display:grid;place-items:center;border:2px dashed var(--ocre);border-radius:50%;color:var(--terracota)}
+.nav{display:flex;gap:18px}
+.nav a{color:var(--mudo);text-decoration:none;text-transform:uppercase;letter-spacing:.1em;font-size:.85rem}
+.nav a[aria-current]{color:var(--fio);border-bottom:2px dashed var(--terracota)}
+.botao-menu{display:none}
+.botao-tema{flex:none;min-height:44px;padding:6px 14px;border:2px dashed var(--mudo);border-radius:6px;background:transparent;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem}
+.botao-tema:hover{border-color:var(--ocre)}
+[data-theme="dark"] .so-claro,[data-theme="light"] .so-escuro{display:none}
+
+/* =========================================================
+   A faixa: título, cenas e o fio do progresso
+   ========================================================= */
+.faixa{margin-top:26px;padding:22px 24px 34px;box-shadow:var(--sombra)}
+.faixa .legenda{color:var(--terracota);font-size:.82rem;margin:0}
+.faixa h1{margin:6px 0 8px;font-size:clamp(2rem,6vw,3.6rem);line-height:1.05;letter-spacing:.03em}
+.faixa h1 em{font-style:normal;color:var(--terracota)}
+.faixa .intro{margin:0 0 18px;color:var(--suave);max-width:720px}
+.cenas{display:grid;grid-template-columns:repeat(20,minmax(0,1fr));gap:5px}
+.mini-cena{position:relative;aspect-ratio:3/4;border:2px dashed var(--mudo);border-radius:3px;display:grid;place-items:end center;padding-bottom:3px;font:400 .72rem Metamorphous,serif;color:var(--mudo);text-decoration:none;overflow:hidden;background:var(--linho2)}
+.mini-cena:before{content:"";position:absolute;left:0;right:0;bottom:0;height:calc(var(--g-progresso,0)*100%);background:color-mix(in srgb,var(--c) 32%,transparent);transition:height .6s}
+.mini-cena span{position:relative}
+.mini-cena:nth-child(4n+1){--c:var(--terracota)}.mini-cena:nth-child(4n+2){--c:var(--ocre)}.mini-cena:nth-child(4n+3){--c:var(--salvia)}.mini-cena:nth-child(4n){--c:var(--anil)}
+.mini-cena[data-bordada]{border-style:solid;border-color:var(--c);color:var(--fio)}
+.mini-cena[data-atual]{outline:2px solid var(--ocre);outline-offset:2px;color:var(--fio)}
+.mini-cena:hover{color:var(--fio);border-color:var(--c)}
+.fio{position:absolute;left:24px;right:24px;bottom:14px;height:6px}
+.fio:before{content:"";position:absolute;left:0;right:0;top:2px;border-top:2px dashed color-mix(in srgb,var(--mudo) 55%,transparent)}
+.fio i{position:absolute;left:0;top:0;height:6px;width:calc(var(--g-progresso,0)*100%);background:repeating-linear-gradient(90deg,var(--terracota) 0 12px,transparent 12px 16px);border-radius:3px;transition:width .8s}
+.fio b{position:absolute;top:-13px;left:calc(var(--g-progresso,0)*100% - 8px);font-size:1.1rem;transition:left .8s;transform:rotate(-20deg)}
+
+/* Números e meadas de lã (raridades) */
+.bordado{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 30px;align-items:center;margin:18px 4px 0}
+.contas{display:flex;flex-wrap:wrap;gap:4px 22px;color:var(--mudo)}
+.contas b{color:var(--fio);font:400 1.5rem Metamorphous,serif}
+.meadas{display:flex;gap:10px;flex-wrap:wrap}
+.meada{display:flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;border:2px dashed var(--cor);border-radius:30px;font-size:.86rem;color:var(--mudo)}
+.meada i{width:26px;height:26px;border-radius:50%;background:repeating-linear-gradient(115deg,var(--cor) 0 3px,color-mix(in srgb,var(--cor) 60%,var(--linho)) 3px 5px);box-shadow:inset 0 0 0 2px #0002;position:relative;overflow:hidden}
+.meada i:after{content:"";position:absolute;inset:0;background:var(--linho2);transform:translateY(calc(var(--g-progresso,0)*-100%));opacity:.75}
+.meada b{color:var(--fio);font-weight:500}
+
+/* =========================================================
+   Legenda (resumo do 100%) e roteiro
+   ========================================================= */
+.painel{margin-top:22px;padding:20px 22px;border:2px solid var(--linho3);border-radius:6px}
+.painel>h2{margin:0 0 12px;font-size:1.2rem;letter-spacing:.06em;color:var(--terracota)}
+.etiquetas{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:0}
+.etiquetas div{border:2px dashed var(--linho3);border-radius:6px;padding:8px 12px;background:var(--linho2)}
+.etiquetas dt{font:400 .72rem Metamorphous,serif;letter-spacing:.12em;text-transform:uppercase;color:var(--mudo)}
+.etiquetas dd{margin:2px 0 0;font-weight:500;line-height:1.3}
+.resumo-texto{margin:14px 0 0;color:var(--suave)}
+.roteiro{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.roteiro li{display:flex;gap:12px;padding:12px;border-radius:6px;background:var(--linho2);border-left:4px solid var(--ocre)}
+.roteiro li:nth-child(4n+1){border-left-color:var(--terracota)}.roteiro li:nth-child(4n+3){border-left-color:var(--salvia)}.roteiro li:nth-child(4n){border-left-color:var(--anil)}
+.roteiro-n{flex:none;font:400 1.1rem Metamorphous,serif;color:var(--terracota);min-width:26px}
+.roteiro strong{display:block;font-family:Metamorphous,serif;font-weight:400;line-height:1.3}
+.roteiro p{margin:4px 0;color:var(--suave);font-size:.95rem}
+.roteiro a{font-size:.9rem}
+
+/* =========================================================
+   Ferramentas (filtros, busca, menu)
+   ========================================================= */
+.ferramentas{position:sticky;top:63px;z-index:10;margin:22px 0 10px;padding:12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;border:2px solid var(--linho3);border-radius:6px;background:color-mix(in srgb,var(--linho) 94%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.ferramentas button,.ferramentas summary{min-height:44px;padding:8px 14px;border:2px dashed var(--mudo);border-radius:6px;background:transparent;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;list-style:none}
+.ferramentas summary::-webkit-details-marker{display:none}
+.ferramentas button[aria-pressed="true"]{border-style:solid;border-color:var(--terracota);background:var(--terracota);color:var(--tinta-sobre-la)}
+.ferramentas .busca{flex:1 1 240px;min-width:0;min-height:44px;padding:8px 14px;border:2px solid var(--linho3);border-radius:6px;background:var(--parede);font-size:1rem}
+.ferramentas .busca::placeholder{color:var(--mudo);opacity:1}
+.ferramentas .proximo{border-style:solid;border-color:var(--ocre);color:var(--fio)}
+.mais{position:relative}
+.mais[open] summary{border-color:var(--ocre)}
+.mais-lista{position:absolute;right:0;top:calc(100% + 6px);z-index:30;min-width:230px;display:grid;padding:6px;border:2px solid var(--linho3);border-radius:6px;background:var(--linho);box-shadow:var(--sombra)}
+.mais-lista button{border:0;text-align:left;text-transform:none;letter-spacing:0;font:400 .95rem Spectral,serif}
+.mais-lista button:hover{background:var(--linho2)}
+.mais-lista .perigo{color:var(--terracota)}
+.vazio{text-align:center;color:var(--mudo);padding:30px 0}
+
+/* =========================================================
+   Cenas (capítulos) e retalhos (conquistas)
+   ========================================================= */
+.cena{margin-top:18px;border:2px solid var(--ocre);border-radius:6px;overflow:hidden;box-shadow:var(--sombra)}
+.cena-cab{display:flex;align-items:center;gap:14px;padding:12px 16px;background:var(--linho2);border-bottom:2px solid var(--ocre);cursor:pointer}
+.cena[data-recolhido] .cena-cab{border-bottom:0}
+.cena-num{flex:none;width:46px;height:46px;display:grid;place-items:center;border:2px dashed var(--terracota);border-radius:50%;font:400 1rem Metamorphous,serif;color:var(--terracota);background:var(--linho)}
+.cena[data-completo] .cena-num{border-style:solid;background:var(--terracota);color:var(--tinta-sobre-la)}
+.cena-cab small{display:block;color:var(--terracota);font-size:.76rem}
+.cena-cab h2{margin:0;font-size:1.25rem;line-height:1.25;letter-spacing:.04em}
+.cena-cab p{margin:2px 0 0;color:var(--mudo);font-style:italic;font-size:.95rem}
+.cena-seta{margin-left:auto;color:var(--mudo);transition:transform .2s}
+.cena[data-recolhido] .cena-seta{transform:rotate(-90deg)}
+.cena-nota{margin:14px 16px 0;padding:10px 14px;border-left:4px solid var(--anil);background:color-mix(in srgb,var(--anil) 10%,transparent);color:var(--suave);font-size:.95rem}
+.retalhos{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;padding:16px}
+.retalho{position:relative;display:flex;flex-direction:column;padding:14px;border-radius:6px;border:2px dashed color-mix(in srgb,var(--cor) 60%,transparent);background:var(--linho);transition:border-color .4s,box-shadow .4s}
+.retalho[data-feita]{border-style:solid;border-color:var(--cor);box-shadow:0 0 0 4px var(--linho),0 0 0 6px color-mix(in srgb,var(--cor) 45%,transparent)}
+.retalho-cab{display:flex;gap:12px;align-items:center}
+.retalho-cab img{flex:none;width:56px;height:56px;border-radius:50%;border:2px solid var(--cor);filter:sepia(.45) saturate(.75);transition:filter .5s}
+.retalho[data-feita] .retalho-cab img{filter:none}
+.retalho h3{margin:0;font-size:1.06rem;line-height:1.25}
+.retalho p{margin:0}
+.retalho-desc{margin-top:10px!important;color:var(--mudo);font-style:italic;font-size:.94rem}
+.retalho-dica{margin-top:6px!important;color:var(--suave);font-size:.98rem}
+.retalho-perdivel{margin-top:8px!important;padding:6px 10px;border:2px dashed var(--terracota);border-radius:4px;font-size:.92rem}
+.retalho-extra,.retalho-fontes{margin-top:8px!important;font-size:.88rem;color:var(--mudo)}
+.retalho-fios{display:flex;flex-wrap:wrap;gap:6px 10px;margin-top:10px;font-size:.8rem;color:var(--mudo)}
+.retalho-fios span{border-bottom:2px dashed var(--cor);padding:0 2px}
+.retalho-fios .la{color:var(--fio)}
+/* A agulha: o checkbox */
+.agulha{display:flex;align-items:center;justify-content:center;min-height:44px;margin-top:auto;padding-top:12px;cursor:pointer}
+.agulha input{position:absolute;opacity:0;width:1px;height:1px}
+.agulha:before{content:"🪡  Bordar";display:flex;align-items:center;justify-content:center;width:100%;min-height:44px;border:2px dashed var(--cor);border-radius:4px;font:400 .82rem Metamorphous,serif;letter-spacing:.12em;text-transform:uppercase;transition:background .3s,color .3s}
+.agulha:hover:before{background:color-mix(in srgb,var(--cor) 14%,transparent)}
+.retalho[data-feita] .agulha:before{content:"✚  Bordada";border-style:solid;background:var(--cor);color:var(--tinta-sobre-la);animation:ponto .4s ease-out}
+.agulha:focus-within:before{outline:2px solid var(--ocre);outline-offset:2px}
+@keyframes ponto{0%{transform:scale(.94)}60%{transform:scale(1.03)}100%{transform:none}}
+.g-flash{animation:costura 1.4s ease}
+@keyframes costura{25%,60%{box-shadow:0 0 0 4px var(--linho),0 0 0 7px var(--ocre)}}
+
+/* =========================================================
+   Notas do bordador (fontes) e rodapé
+   ========================================================= */
+.notas-sec{margin-top:40px}
+.notas-sec>h2{font-size:1.4rem;letter-spacing:.06em;margin:0 0 6px}
+.notas-sec>p{margin:0 0 14px;color:var(--mudo)}
+.dobra{border:2px solid var(--linho3);border-radius:6px;padding:4px 16px;margin-top:12px}
+.dobra summary{min-height:44px;display:flex;align-items:center;cursor:pointer;font:400 1rem Metamorphous,serif;letter-spacing:.06em}
+.dobra summary span{margin-left:8px;color:var(--mudo)}
+.notas{margin:0 0 12px;padding-left:20px;color:var(--suave);font-size:.95rem}
+.notas li{margin:6px 0}
+.notas small{color:var(--mudo)}
+[data-g="rodape"]{margin-top:46px;padding:0 0 calc(40px + env(safe-area-inset-bottom));color:var(--mudo);font-size:.88rem}
+.barra-rodape{height:14px;margin-bottom:16px;border-block:4px double var(--terracota)}
+[data-g="rodape"] p{width:min(100% - 32px,1180px);margin-inline:auto}
+
+/* =========================================================
+   Celular
+   ========================================================= */
+@media (max-width:760px){
+  body{font-size:16px}
+  .faixa{padding:18px 16px 32px}
+  .fio{left:16px;right:16px}
+  .cenas{grid-template-columns:repeat(10,minmax(0,1fr));gap:4px}
+  .mini-cena{font-size:.56rem;letter-spacing:-.04em;border-width:1.5px}
+  .meadas{gap:8px}.meada{font-size:.8rem}
+  .bordado{grid-template-columns:1fr}
+  .ferramentas{position:static}
+  .retalhos{grid-template-columns:1fr;padding:12px}
+  .cena-cab{padding:10px 12px;gap:10px}
+  .cena-num{width:40px;height:40px;font-size:.9rem}
+  .botao-tema .so-escuro,.botao-tema .so-claro{font-size:0}
+  .botao-tema .so-escuro:before{content:"☀";font-size:1rem}.botao-tema .so-claro:before{content:"☾";font-size:1rem}
+}
+@media (max-width:420px){.ferramentas .filtros button{padding:8px 10px}}
+
+/* Impressão: linho claro, tudo aberto */
+@media print{
+  :root{--parede:#fff;--linho:#fff;--linho2:#f4f4f4;--fio:#000;--suave:#222;--mudo:#444}
+  [data-g="topo"],.ferramentas,.agulha,.fio{display:none!important}
+  .cena,.retalho{box-shadow:none;break-inside:avoid}
+}

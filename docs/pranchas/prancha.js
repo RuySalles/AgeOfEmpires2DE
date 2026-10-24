@@ -1,12 +1,13 @@
 // Moldura comum das pranchas de conceito: lê dados reais do guia e desenha o recorte
 // (topo + um capítulo + alguns cartões + progresso) em quatro quadros: escuro e claro, largo e 375 px.
 // Cada prancha chama montar({ render, ids, capitulo, feitas }) com o seu próprio renderizador.
+// Script comum (sem módulo) e dados em dados.js: abre com duplo clique, sem servidor.
 
 const RARITY = [[8, 'epic', 'Épica'], [15, 'rare', 'Rara'], [30, 'uncommon', 'Incomum'], [Infinity, 'common', 'Comum']];
 const pct = p => p.toFixed(1).replace('.', ',') + '%';
 
-export async function montar({ render, ids, capitulo, feitas = [] }) {
-  const data = await fetch('../../data/conquistas.json').then(r => r.json());
+window.montar = async function montar({ render, ids, capitulo, feitas = [] }) {
+  const data = window.PRANCHA_DADOS;
   const ach = data.achievements;
   const total = Object.keys(ach).length;
   const ch = data.chapters.find(c => c.id === capitulo);

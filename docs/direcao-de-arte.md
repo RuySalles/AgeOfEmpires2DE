@@ -11,7 +11,7 @@
 
 ## Conceitos propostos
 
-As pranchas estão em `docs/pranchas/` (abra pelo servidor local).
+As pranchas estão em `docs/pranchas/` e abrem com duplo clique (os dados vão embutidos em `dados.js`).
 
 1. **A Árvore de Tecnologia** (interface do jogo) — `conceito-1.html`
 2. **A Crônica Iluminada** (artefato do mundo) — `conceito-2.html`
@@ -19,4 +19,11 @@ As pranchas estão em `docs/pranchas/` (abra pelo servidor local).
 
 ## Conceito escolhido
 
-_A definir pelo Ruy._
+**3 · A Tapeçaria**, escolhido pelo Ruy em 23/10/2026.
+
+- **Objeto**: uma tapeçaria de linho pendurada no salão, como a de Bayeux.
+- **Peças**: topo = faixa com as 20 cenas (capítulos), que se enchem de lã conforme o progresso; capítulo = cena com legenda em maiúsculas; conquista = retalho com costura tracejada na cor de lã da raridade (anil épica, sálvia rara, ocre incomum, terracota comum); marcar = "Bordar"; progresso = o fio vermelho com a agulha na barra e as meadas de lã por raridade.
+- **Vocabulário**: Toda a tapeçaria / Por bordar / Bordadas, Fios soltos (perdíveis), Próximo ponto, Borde junto, Notas do bordador.
+- **Temas**: escuro "Salão à luz de tocha", claro "Linho cru".
+- **Fontes**: Metamorphous (legendas) + Spectral (texto).
+- **Momento de assinatura**: a costura do retalho fecha ao bordar e a cena do capítulo na faixa do topo se enche de lã até ficar bordada.

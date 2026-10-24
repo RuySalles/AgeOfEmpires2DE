@@ -114,8 +114,10 @@
   <div class="pr-phone"><div class="c3 t-claro" data-quadro></div></div>
  </div>
 </div>
-<script type="module">
-import { montar } from './prancha.js';
+<script src="dados.js"></script>
+<script src="prancha.js"></script>
+<script>
+(async () => {
 const roman = n => ['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV','XVI','XVII','XVIII','XIX','XX'][n - 1];
 const render = vm => `
 <section class="c3-faixa c3-tecido">
@@ -139,6 +141,7 @@ const render = vm => `
  </div>
 </section>`;
 await montar({ render, capitulo: 'reis', ids: ['ACHIEVEMENT_CAMPAIGN_WALLACE_COMPLETED', 'ACHIEVEMENT_KUSHLUK_ASSASSINATION', 'ACHIEVEMENT_CATHEDRAL_RUSH'], feitas: ['ACHIEVEMENT_CAMPAIGN_WALLACE_COMPLETED'] });
+})();
 </script>
 </body>
 </html>

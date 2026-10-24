@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- Ícone da aba: troque as cores pelas do tema (--bg e --accent) e o símbolo pelo do jogo -->
-  <rect width="64" height="64" rx="12" fill="#0f1012"/>
-  <path d="M32 6 58 32 32 58 6 32Z" fill="#1c1f24" stroke="#e0a84a" stroke-width="3.5" stroke-linejoin="round"/>
-  <path d="M32 19 35.5 28.5 45 32 35.5 35.5 32 45 28.5 35.5 19 32 28.5 28.5Z" fill="#e0a84a"/>
+  <!-- Ícone da aba: retalho de linho com costura tracejada e o ponto em cruz (tema "A Tapeçaria") -->
+  <rect width="64" height="64" rx="12" fill="#16110c"/>
+  <rect x="8" y="8" width="48" height="48" rx="6" fill="#2a2218" stroke="#e47f58" stroke-width="3" stroke-dasharray="6 4"/>
+  <path d="M32 17v30M17 32h30" stroke="#e5b552" stroke-width="7" stroke-linecap="round"/>
 </svg>

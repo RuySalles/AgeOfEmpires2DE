@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#202020">
-<title>Age of Empires II: Definitive Edition — Conquistas 100%</title>
-<meta name="description" content="Todas as conquistas de Age of Empires II: Definitive Edition com dica de como conseguir cada uma, perdíveis, raridade, roteiro do 100% e checklist com progresso salvo no navegador.">
+<meta name="theme-color" content="#16110c">
+<title>Age of Empires II: Definitive Edition — A tapeçaria das conquistas</title>
+<meta name="description" content="As 370 conquistas de Age of Empires II: Definitive Edition, do jogo base às DLCs, com a dica de cada uma, atalhos de escaramuça, roteiro do 100% e checklist com progresso salvo no navegador.">
 <link rel="canonical" href="https://ruysalles.github.io/AgeOfEmpires2DE/">
 
 <!-- Ícones da aba e da tela inicial -->
@@ -15,67 +15,97 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="AoE II · Guia 100%">
-<meta property="og:title" content="Age of Empires II: Definitive Edition — Conquistas 100%">
-<meta property="og:description" content="Todas as conquistas com dica, perdíveis, raridade e checklist.">
+<meta property="og:title" content="Age of Empires II: DE — A tapeçaria das 370 conquistas">
+<meta property="og:description" content="370 conquistas bordadas cena a cena: dica e fonte de cada uma, atalhos de escaramuça e checklist.">
 <meta property="og:url" content="https://ruysalles.github.io/AgeOfEmpires2DE/">
-<meta property="og:image" content="https://ruysalles.github.io/AgeOfEmpires2DE/og-image-1.jpg">
+<meta property="og:image" content="https://ruysalles.github.io/AgeOfEmpires2DE/og-image-2.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Age of Empires II: Definitive Edition — Guia de conquistas 100%">
+<meta property="og:image:alt" content="A tapeçaria das conquistas de Age of Empires II: Definitive Edition">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Age of Empires II: Definitive Edition — Conquistas 100%">
-<meta name="twitter:image" content="https://ruysalles.github.io/AgeOfEmpires2DE/og-image-1.jpg">
+<meta name="twitter:title" content="Age of Empires II: DE — A tapeçaria das 370 conquistas">
+<meta name="twitter:image" content="https://ruysalles.github.io/AgeOfEmpires2DE/og-image-2.jpg">
 
 <script src="assets/motor/theme-init.js"></script>
-<!-- TEMA: fontes, folhas de estilo e arte são do guia (assets/tema/). O motor.css é só o mínimo funcional. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Spectral:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/motor/motor.css">
 <link rel="stylesheet" href="assets/tema/tema.css">
 </head>
 <body data-pagina="conquistas">
-<!--
-  TEMA-ESQUELETO — esqueleto neutro. Esta página é do TEMA: reescreva a composição inteira a partir da direção de arte
-  (references/direcao-de-arte.md). O que não pode faltar são os GANCHOS data-g abaixo (lista completa em
-  references/motor.md). Fora eles, qualquer estrutura, ordem, elemento ou texto serve.
--->
 <a class="g-pular" href="#conteudo">Pular para o conteúdo</a>
 <header data-g="topo"></header>
-<main id="conteudo">
- <section>
-  <h1><span data-g="total">0</span> conquistas de Age of Empires II: Definitive Edition</h1>
-  <p data-g="intro"></p>
-  <a data-g="link-rota" href="rota.html">Ver a rota</a>
-  <p data-g="progresso" aria-live="polite"></p>
-  <p data-g="nota-raridade"></p>
+
+<main class="miolo" id="conteudo">
+ <!-- A faixa da tapeçaria: título, as cenas (capítulos) e o fio do progresso -->
+ <section class="faixa tecido bainha" aria-label="A tapeçaria">
+  <p class="legenda">Hic incipit · aqui começa</p>
+  <h1>A tapeçaria das <em><span data-g="total">370</span> conquistas</em></h1>
+  <p class="intro" data-g="intro"></p>
+  <nav class="cenas" aria-label="Cenas da tapeçaria (capítulos)"></nav>
+  <div class="fio" aria-hidden="true"><i></i><b>🪡</b></div>
  </section>
 
- <section data-g="sec-resumo" aria-label="Resumo do 100%"><div data-g="resumo"></div></section>
- <section data-g="sec-roteiro" aria-label="Roteiro do 100%"><h2>Roteiro</h2><div data-g="roteiro"></div></section>
+ <div class="bordado">
+  <div class="contas" aria-live="polite">
+   <span><b data-feitas>0/370</b> bordadas</span>
+   <span><b data-pct>0%</b> da tapeçaria</span>
+  </div>
+  <div class="meadas" aria-label="Por raridade">
+   <span class="meada" data-meada="epic" data-raridade="epic"><i aria-hidden="true"></i>Anil · épicas <b>0/0</b></span>
+   <span class="meada" data-meada="rare" data-raridade="rare"><i aria-hidden="true"></i>Sálvia · raras <b>0/0</b></span>
+   <span class="meada" data-meada="uncommon" data-raridade="uncommon"><i aria-hidden="true"></i>Ocre · incomuns <b>0/0</b></span>
+   <span class="meada" data-meada="common" data-raridade="common"><i aria-hidden="true"></i>Terracota · comuns <b>0/0</b></span>
+  </div>
+ </div>
 
- <div role="toolbar" aria-label="Filtros">
-  <button type="button" data-g="filtro" data-filtro="all" aria-pressed="true">Todas</button>
-  <button type="button" data-g="filtro" data-filtro="pending" aria-pressed="false">Pendentes</button>
-  <button type="button" data-g="filtro" data-filtro="done" aria-pressed="false">Concluídas</button>
-  <button type="button" data-g="perdiveis" aria-pressed="false">Só perdíveis</button>
-  <input type="search" data-g="busca" placeholder="Buscar conquista ou dica…" aria-label="Buscar conquista">
-  <button type="button" data-g="proxima">Próxima pendente</button>
-  <details data-g="menu-mais">
-   <summary>Mais opções</summary>
-   <button type="button" data-g="spoilers" aria-pressed="false">Mostrar spoilers</button>
-   <button type="button" data-g="imprimir">Imprimir / PDF</button>
-   <button type="button" data-g="exportar">Exportar progresso</button>
-   <button type="button" data-g="importar">Importar progresso</button>
-   <button type="button" data-g="zerar">Zerar checklist</button>
+ <section class="painel tecido" data-g="sec-resumo" aria-label="Legenda da tapeçaria">
+  <h2>Legenda da tapeçaria</h2>
+  <div data-g="resumo"></div>
+ </section>
+
+ <section class="painel tecido" data-g="sec-roteiro" aria-label="Roteiro do 100%">
+  <h2>A ordem dos pontos</h2>
+  <div data-g="roteiro"></div>
+ </section>
+
+ <div class="ferramentas" role="toolbar" aria-label="Filtros e busca">
+  <span class="filtros" role="group" aria-label="Mostrar">
+   <button type="button" data-g="filtro" data-filtro="all" aria-pressed="true">Toda a tapeçaria</button>
+   <button type="button" data-g="filtro" data-filtro="pending" aria-pressed="false">Por bordar</button>
+   <button type="button" data-g="filtro" data-filtro="done" aria-pressed="false">Bordadas</button>
+  </span>
+  <button type="button" data-g="perdiveis" aria-pressed="false">Fios soltos</button>
+  <input class="busca" type="search" data-g="busca" placeholder="Procurar na tapeçaria… (ex.: Wololo, Átila, Difícil)" aria-label="Buscar conquista ou dica">
+  <button type="button" class="proximo" data-g="proxima">Próximo ponto →</button>
+  <details class="mais" data-g="menu-mais">
+   <summary aria-label="Mais opções">⋯</summary>
+   <div class="mais-lista">
+    <button type="button" data-g="spoilers" aria-pressed="false">Mostrar spoilers</button>
+    <button type="button" data-g="imprimir">Imprimir / PDF</button>
+    <button type="button" data-g="exportar">Exportar progresso (.json)</button>
+    <button type="button" data-g="importar">Importar progresso</button>
+    <button type="button" class="perigo" data-g="zerar">Desfazer todo o bordado</button>
+   </div>
   </details>
  </div>
 
  <div data-g="capitulos"></div>
- <p data-g="vazio" hidden>Nenhuma conquista corresponde à busca ou ao filtro.</p>
+ <p class="vazio" data-g="vazio" hidden>Nenhum retalho corresponde à busca ou ao filtro.</p>
 
- <section aria-label="Fontes">
-  <h2>Fontes (<span data-g="total-fontes"></span>)</h2>
-  <div data-g="fontes"></div>
-  <div data-g="sec-confirmar"><h3>Pontos a confirmar (<span data-g="total-confirmar"></span>)</h3><div data-g="confirmar"></div></div>
+ <section class="notas-sec" aria-label="Fontes">
+  <h2>Notas do bordador</h2>
+  <p data-g="nota-raridade"></p>
+  <details class="dobra" open>
+   <summary>Fontes <span data-g="total-fontes"></span></summary>
+   <div data-g="fontes"></div>
+  </details>
+  <details class="dobra" data-g="sec-confirmar">
+   <summary>Pontos a conferir no jogo <span data-g="total-confirmar"></span></summary>
+   <div data-g="confirmar"></div>
+  </details>
  </section>
 </main>
 <footer data-g="rodape"></footer>
