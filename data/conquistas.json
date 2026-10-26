@@ -1,7 +1,7 @@
 {
   "_leia-me": "Conteúdo da página de conquistas. Nomes, descrições e porcentagens vêm da Steam (tools/steam_importar.py cria; tools/update_steam.py mantém as % atualizadas). Dicas, capítulos, roteiro e campos extras são escritos à mão. Nunca mude a chave de uma conquista: ela é o id oficial da Steam e guarda o progresso.",
   "steamAppId": 813780,
-  "updated": "2026-10-23",
+  "updated": "2026-10-26",
   "completion": "",
   "intro": "As 370 conquistas de <strong>Age of Empires II: Definitive Edition</strong> na Steam, do jogo base às DLCs, com o atalho de cada uma, a missão onde sai e o que dá para fazer junto. A mais rara, <em>Acumulardrada</em>, tem menos de 0,1% dos jogadores.",
   "overview": {
@@ -659,7 +659,7 @@
     "CELTS_VICTORY": {
       "name": "Vitória Celta",
       "desc": "Vença uma partida jogando com os celtas.",
-      "pct": 52.8,
+      "pct": 52.9,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online). Sai naturalmente na campanha de William Wallace.",
       "difficulty": 1,
       "time": "~3 min",
@@ -959,7 +959,7 @@
     "SARACENS_VICTORY": {
       "name": "Vitória Sarracena",
       "desc": "Vença uma partida jogando com os sarracenos.",
-      "pct": 23.3,
+      "pct": 23.4,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online).",
       "difficulty": 1,
       "time": "~3 min",
@@ -989,7 +989,7 @@
     "SPANISH_VICTORY": {
       "name": "Vitória Espanhola",
       "desc": "Vença uma partida jogando com os espanhóis.",
-      "pct": 28.4,
+      "pct": 28.5,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online). Faça junto com o Extremamente Inesperado.",
       "difficulty": 1,
       "time": "~3 min",
@@ -3130,7 +3130,7 @@
     "ACHIEVEMENT_BABY_BOOMER": {
       "name": "Baby Boomer",
       "desc": "Fila 5 Aldeões no Centro da Cidade na Idade das Trevas.",
-      "pct": 54.8,
+      "pct": 54.9,
       "tip": "Monte a escaramuça de treino: você + 1 IA aliada contra 1 IA <em>Mais Fácil</em>, recursos infinitos, início na Idade das Trevas. Logo no início, clique 5 vezes em Aldeão no Centro da Cidade para deixar 5 na fila.",
       "difficulty": 1,
       "time": "~1 min",
@@ -4482,7 +4482,7 @@
     "ACHIEVEMENT_A_HERO_COMES": {
       "name": "Surge um Herói; Ele Ganha Renome",
       "desc": "Use uma das habilidades ativas dos seus heróis em Liu Bei 1.",
-      "pct": 1.5,
+      "pct": 1.6,
       "tip": "Em Liu Bei 1, use uma habilidade ativa de qualquer herói (botão no painel do herói) e termine o mapa.",
       "difficulty": 1,
       "sources": [
@@ -4670,7 +4670,7 @@
     "ACHIEVEMENT_DARE_TO_DIE": {
       "name": "Ouse Morrer",
       "desc": "Reequipe 20 escudos com Espadachins Jian jogando com os Wu.",
-      "pct": 1.3,
+      "pct": 1.4,
       "tip": "Jogue de Wu: Espadachins Jian perdem o escudo perto de 40 de vida e o reequipam ao se curar. Faça isso 20 vezes; se preciso, fira seus próprios Jian com um Onagro e cure com Monges.",
       "difficulty": 2,
       "time": "~20 min",
@@ -4684,7 +4684,7 @@
     "JURCHENS_VICTORY": {
       "name": "Vitória de Jurchéns",
       "desc": "Vença uma partida jogando com os Jurchéns .",
-      "pct": 1.3,
+      "pct": 1.4,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online). Exige The Three Kingdoms. Um guia relata que o atalho de pontuação falhou para estas civilizações novas; se acontecer, vença um Regicídio com recursos altos e início Imperial.",
       "difficulty": 1,
       "time": "~3 min",
@@ -5197,7 +5197,7 @@
     "ACHIEVEMENT_GET_OUT_OF_MY_SWAMP": {
       "name": "Caia Fora do Meu Pântano!",
       "desc": "Não permita que o inimigo capture o Monumento em Riccall em ''Portão de Fulford''.",
-      "pct": 0.2,
+      "pct": 0.3,
       "tip": "Em <em>Portão de Fulford</em>, não deixe capturarem o Monumento de Riccall: bestas no entroncamento, Castelo no lado leste e torre contra o amarelo.",
       "difficulty": 3,
       "time": "~1 h",
@@ -5220,7 +5220,7 @@
     "SAXONS_VICTORY": {
       "name": "Vitória dos Saxões",
       "desc": "Vença uma partida jogando com os saxões.",
-      "pct": 0.5,
+      "pct": 0.6,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online). Exige The Viking Sagas.",
       "difficulty": 1,
       "time": "~3 min",
