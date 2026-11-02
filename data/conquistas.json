@@ -1,7 +1,7 @@
 {
   "_leia-me": "Conteúdo da página de conquistas. Nomes, descrições e porcentagens vêm da Steam (tools/steam_importar.py cria; tools/update_steam.py mantém as % atualizadas). Dicas, capítulos, roteiro e campos extras são escritos à mão. Nunca mude a chave de uma conquista: ela é o id oficial da Steam e guarda o progresso.",
   "steamAppId": 813780,
-  "updated": "2026-10-26",
+  "updated": "2026-11-02",
   "completion": "",
   "intro": "As 370 conquistas de <strong>Age of Empires II: Definitive Edition</strong> na Steam, do jogo base às DLCs, com o atalho de cada uma, a missão onde sai e o que dá para fazer junto. A mais rara, <em>Acumulardrada</em>, tem menos de 0,1% dos jogadores.",
   "overview": {
@@ -704,7 +704,7 @@
     "ETHIOPIANS_VICTORY": {
       "name": "Vitória Etíope",
       "desc": "Vença uma partida jogando com os etíopes.",
-      "pct": 19.4,
+      "pct": 19.5,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online).",
       "difficulty": 1,
       "time": "~3 min",
@@ -719,7 +719,7 @@
     "FRANKS_VICTORY": {
       "name": "Vitória Franca",
       "desc": "Vença uma partida jogando com os francos.",
-      "pct": 36.0,
+      "pct": 36.1,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online).",
       "difficulty": 1,
       "time": "~3 min",
@@ -749,7 +749,7 @@
     "HUNS_VICTORY": {
       "name": "Vitória Huna",
       "desc": "Vença uma partida jogando com os hunos.",
-      "pct": 26.4,
+      "pct": 26.5,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online).",
       "difficulty": 1,
       "time": "~3 min",
@@ -884,7 +884,7 @@
     "MALIANS_VICTORY": {
       "name": "Vitória Maliana",
       "desc": "Vença uma partida jogando com os malianos.",
-      "pct": 17.7,
+      "pct": 17.8,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online).",
       "difficulty": 1,
       "time": "~3 min",
@@ -1049,7 +1049,7 @@
     "VIETNAMESE_VICTORY": {
       "name": "Vitória Vietnamita",
       "desc": "Vença uma partida jogando com os vietnamitas.",
-      "pct": 19.2,
+      "pct": 19.3,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online).",
       "difficulty": 1,
       "time": "~3 min",
@@ -1125,7 +1125,7 @@
     "ACHIEVEMENT_CAMPAIGN_BARBAROSSA_COMPLETED": {
       "name": "O Imperador Contra-Ataca",
       "desc": "Complete a Campanha de Barbarossa.",
-      "pct": 5.8,
+      "pct": 5.9,
       "tip": "Vença a missão final da campanha de Barbarossa, em qualquer dificuldade. Jogue já fazendo as conquistas de missão desta campanha para não repetir fases.",
       "difficulty": 2,
       "sources": [
@@ -1195,7 +1195,7 @@
     "ACHIEVEMENT_CAMPAIGN_SFORZA_COMPLETED": {
       "name": "Homem Renascentista",
       "desc": "Complete a Campanha de Sforza.",
-      "pct": 5.3,
+      "pct": 5.4,
       "tip": "Vença a missão final da campanha de Sforza, em qualquer dificuldade. Jogue já fazendo as conquistas de missão desta campanha para não repetir fases.",
       "difficulty": 2,
       "sources": [
@@ -1263,7 +1263,7 @@
     "ACHIEVEMENT_CAMPAIGN_ETHIOPIAN_COMPLETED": {
       "name": "Destruidora de Axum",
       "desc": "Complete a Campanha de Yodit.",
-      "pct": 5.0,
+      "pct": 5.1,
       "tip": "Vença a missão final da campanha de Yodit, em qualquer dificuldade. Jogue já fazendo as conquistas de missão desta campanha para não repetir fases.",
       "difficulty": 2,
       "sources": [
@@ -1273,7 +1273,7 @@
     "ACHIEVEMENT_CAMPAIGN_MALAY_COMPLETED": {
       "name": "Passeio pelas Ilhas",
       "desc": "Complete a Campanha de Gajah Mada.",
-      "pct": 3.4,
+      "pct": 3.5,
       "tip": "Vença a missão final da campanha de Gajah Mada, em qualquer dificuldade. Jogue já fazendo as conquistas de missão desta campanha para não repetir fases.",
       "difficulty": 2,
       "sources": [
@@ -1333,7 +1333,7 @@
     "ACHIEVEMENT_CAMPAIGN_CUMAN_COMPLETED": {
       "name": "Khanpanha",
       "desc": "Complete a Campanha do Khan Kotyan.",
-      "pct": 5.0,
+      "pct": 5.1,
       "tip": "Vença a missão final da campanha de Khan Kotyan, em qualquer dificuldade. Jogue já fazendo as conquistas de missão desta campanha para não repetir fases.",
       "difficulty": 2,
       "sources": [
@@ -2264,7 +2264,7 @@
     "ACHIEVEMENT_HARD_AI": {
       "name": "Viagem Difícil",
       "desc": "Derrote um adversário controlado pelo computador no modo \"Difícil\" em uma partida 1x1.",
-      "pct": 10.5,
+      "pct": 10.6,
       "tip": "Partida 1x1 contra uma IA na dificuldade <em>Difícil</em>. Atalho dos guias: modo <em>Capturar a Relíquia</em>, recursos Altos, início na Era Feudal (ou dos Castelos), mapa Costeiro. Construa Ferraria e Mercado, chegue aos Castelos, pesquise a velocidade dos Monges e leve a relíquia ao seu Mosteiro antes da IA reagir. Cada dificuldade exige uma partida própria.",
       "difficulty": 2,
       "time": "~10 min",
@@ -2399,7 +2399,7 @@
     "ACHIEVEMENT_CAMPAIGN_BURGUNDIANS_COMPLETED": {
       "name": "Bondade, Ousadia e Bravura",
       "desc": "Complete a campanha Os Grão-Duques do Oeste.",
-      "pct": 3.9,
+      "pct": 4.0,
       "tip": "Vença a missão final da campanha de Os Grão-Duques do Oeste, em qualquer dificuldade. Jogue já fazendo as conquistas de missão desta campanha para não repetir fases.",
       "difficulty": 2,
       "sources": [
@@ -2467,7 +2467,7 @@
     "ACHIEVEMENT_A_SECOND_HASTINGS": {
       "name": "Uma Segunda Hastings",
       "desc": "Destrua a base de Humberto antes de derrotar Jaqueline em \"As Guerras entre os Hooks e Cods\".",
-      "pct": 0.9,
+      "pct": 1.0,
       "tip": "Em <em>As Guerras entre os Hooks e Cods</em>, arrase a base de Humberto antes de derrotar Jaqueline. Galeões com Canhão, Aríetes Reforçados e uma base avançada perto dele.",
       "difficulty": 3,
       "time": "~1 h",
@@ -2636,7 +2636,7 @@
     "ACHIEVEMENT_CAMPAIGN_POLES_COMPLETED": {
       "name": "Estrela dos Poloneses",
       "desc": "Complete a campanha de Jadwiga.",
-      "pct": 3.3,
+      "pct": 3.4,
       "tip": "Vença a missão final da campanha de Jadwiga, em qualquer dificuldade. Jogue já fazendo as conquistas de missão desta campanha para não repetir fases.",
       "difficulty": 2,
       "together": [
@@ -3011,7 +3011,7 @@
     "ACHIEVEMENT_FACE_MY_RATHA": {
       "name": "Enfrente meu Ratha",
       "desc": "Treine 10 Rathas jogando como os bengalis.",
-      "pct": 7.7,
+      "pct": 7.8,
       "tip": "Jogue de bengalis e treine 10 Rathas no Castelo. Escaramuça com recursos infinitos.",
       "difficulty": 1,
       "time": "~10 min",
@@ -3053,7 +3053,7 @@
     "ACHIEVEMENT_NOT_JUST_A_MILITIA": {
       "name": "Mais do que uma milícia",
       "desc": "Atualize sua Milícia para Homens de Armas.",
-      "pct": 53.2,
+      "pct": 53.3,
       "tip": "Na partida de treino, avance para a Era Feudal, faça um Quartel e pesquise <em>Homem de Armas</em>. Você não precisa ter nenhuma Milícia viva.",
       "difficulty": 1,
       "time": "~5 min",
@@ -3067,7 +3067,7 @@
     "ACHIEVEMENT_FAMILY_FEUDAL": {
       "name": "Família Feudal",
       "desc": "Avance para a Era Feudal em um Modo Campanha.",
-      "pct": 19.7,
+      "pct": 19.8,
       "tip": "Avance para a Era Feudal em qualquer missão de campanha. A segunda missão de Genghis Khan é uma boa opção; acontece naturalmente jogando as campanhas.",
       "difficulty": 1,
       "sources": [
@@ -3116,7 +3116,7 @@
     "ACHIEVEMENT_WINGMAN": {
       "name": "Parceria",
       "desc": "Ganhe um jogo nos modos Escaramuça ou multijogador com um companheiro de equipe humano ou IA.",
-      "pct": 31.6,
+      "pct": 31.7,
       "tip": "Vença a partida de treino 2x1 (você + IA aliada). Qualquer escaramuça ou partida online com um aliado conta.",
       "difficulty": 1,
       "together": [
@@ -3146,7 +3146,7 @@
     "ACHIEVEMENT_BULL_MARKET": {
       "name": "Mercado em alta",
       "desc": "Crie uma Rota de Comércio com outro Mercado.",
-      "pct": 41.0,
+      "pct": 41.1,
       "tip": "Precisa de um Mercado seu e outro de um aliado. Na partida de treino, não derrote o inimigo até a IA aliada chegar à Feudal e construir o Mercado dela (por volta de 11–14 min); então mande uma Carroça de Comércio. Destrava quando a carroça chega ao Mercado aliado.",
       "difficulty": 1,
       "time": "~15 min",
@@ -3161,7 +3161,7 @@
     "ACHIEVEMENT_BON_VOYAGE": {
       "name": "Bon Voyage",
       "desc": "Ative a Exploração Automática em qualquer Modo de Jogo.",
-      "pct": 32.0,
+      "pct": 32.1,
       "tip": "Selecione o Batedor, abra os comandos (atalho G) e clique no ícone de Exploração Automática. Não funciona se o mapa estiver todo revelado, então deixe <em>Revelar Mapa</em> em Normal.",
       "difficulty": 1,
       "time": "~1 min",
@@ -4286,7 +4286,7 @@
     "ACHIEVEMENT_PHILOLACON": {
       "name": "Philolacon",
       "desc": "Deu uma relíquia aos Espartanos em ''Do Outro Lado do Mar Vinho-Escuro'' e ''Ira do Regente''.",
-      "pct": 0.4,
+      "pct": 0.5,
       "tip": "Dê uma relíquia aos espartanos em <em>Do Outro Lado do Mar Vinho-Escuro</em> e na <em>Ira do Regente</em>. Exclui o Rejeitar o Regente: salve antes de cada escolha e faça uma jogada para cada.",
       "difficulty": 2,
       "together": [
@@ -4628,7 +4628,7 @@
     "ACHIEVEMENT_TIME_FOR_A_RAISE": {
       "name": "Hora de ser Promovido",
       "desc": "Promova totalmente 10 Cavalarias Tigre jogando com os Wei.",
-      "pct": 2.4,
+      "pct": 2.5,
       "tip": "Jogue de Wei e promova totalmente 10 Cavalarias Tigre (sobem de nível matando). Deixe-as caçar unidades fracas da IA.",
       "difficulty": 2,
       "time": "~30 min",
@@ -4712,7 +4712,7 @@
     "ACHIEVEMENT_FIREWORKS_SHOW": {
       "name": "Exibição de Fogos de Artifício",
       "desc": "Dispare 100 projéteis com Carroças de Foguete.",
-      "pct": 7.0,
+      "pct": 7.1,
       "tip": "Dispare 100 projéteis com Carroças de Foguete (chineses, jurchéns, quitais ou coreanos). Também sai na batalha <em>Xie An (383)</em> se você levar as carroças para a luta.",
       "difficulty": 1,
       "time": "~15 min",
@@ -5048,7 +5048,7 @@
     "MAPUCHE_VICTORY": {
       "name": "Vitória Mapuche",
       "desc": "Vença uma partida jogando como os mapuches.",
-      "pct": 1.2,
+      "pct": 1.3,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online). Exige The Last Chieftains.",
       "difficulty": 1,
       "time": "~3 min",
@@ -5107,7 +5107,7 @@
     "ACHIEVEMENT_CAMPAIGN_HARALD1_COMPLETED": {
       "name": "A Jornada do Herói",
       "desc": "Conclua a Campanha O Príncipe Exilado.",
-      "pct": 0.4,
+      "pct": 0.5,
       "tip": "Vença a missão final da campanha de O Príncipe Exilado (Haroldo), em qualquer dificuldade. Jogue já fazendo as conquistas de missão desta campanha para não repetir fases. Pegue o baú lendário de cada missão para o Acumulardrada.",
       "difficulty": 2,
       "together": [
@@ -5121,7 +5121,7 @@
     "ACHIEVEMENT_THE_STUFF_OF_LEGEND": {
       "name": "A Essência das Lendas",
       "desc": "Conclua as missões secundárias referentes à derrota de uma cidade siciliana em ''Serva da Morte''.",
-      "pct": 0.2,
+      "pct": 0.3,
       "tip": "Em <em>Serva da Morte</em>, conclua as missões secundárias das cidades sicilianas: verde (destrua as 3 torres externas), amarelo (mate a escolta e escolha a rota sul), laranja (minere a pilha de pedra que abre o túnel). O vermelho solta uma Maravilha por volta dos 50 min.",
       "difficulty": 4,
       "time": "~1,5 h",
@@ -5145,7 +5145,7 @@
     "ACHIEVEMENT_CAMPAIGN_HARALD2_COMPLETED": {
       "name": "Tirano do Elmo com Chifres",
       "desc": "Conclua a Campanha O Governante Duro.",
-      "pct": 0.3,
+      "pct": 0.4,
       "tip": "Vença a missão final da campanha de O Governante Duro, em qualquer dificuldade. Jogue já fazendo as conquistas de missão desta campanha para não repetir fases.",
       "difficulty": 2,
       "together": [
@@ -5171,7 +5171,7 @@
     "ACHIEVEMENT_YOUR_GOD_NOW": {
       "name": "Sou Seu Deus Agora",
       "desc": "Pacifique ao menos 2 condados com uma Relíquia em seus Mosteiros em \"Homens Errantes da Noruega\".",
-      "pct": 0.3,
+      "pct": 0.4,
       "tip": "Em <em>Homens Errantes da Noruega</em>, pacifique 2 condados com relíquias nos Mosteiros deles. São 3 relíquias (abaixo da base laranja, acima da sua, à direita da roxa); ordem: amarelo, roxo, verde. O baú lendário fica ao sul da base azul.",
       "difficulty": 3,
       "time": "~1 h",
@@ -5235,7 +5235,7 @@
     "VARANGIANS_VICTORY": {
       "name": "Vitória dos Varangianos",
       "desc": "Vença uma partida jogando com os varangianos.",
-      "pct": 0.8,
+      "pct": 0.9,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online). Exige The Viking Sagas.",
       "difficulty": 1,
       "time": "~3 min",
@@ -5265,7 +5265,7 @@
     "ACHIEVEMENT_MURDER_FOR_HIRE": {
       "name": "Assassinato por Encomenda",
       "desc": "Acumule 10.000 de ouro usando Guardas Varegues.",
-      "pct": 0.4,
+      "pct": 0.5,
       "tip": "Jogue de varangianos e acumule 10.000 de ouro com Guardas Varegues (eles rendem ouro lutando). Faça muitos e ataque sem parar.",
       "difficulty": 2,
       "time": "~40 min",
