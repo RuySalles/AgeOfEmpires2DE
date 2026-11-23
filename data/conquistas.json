@@ -1,7 +1,7 @@
 {
   "_leia-me": "Conteúdo da página de conquistas. Nomes, descrições e porcentagens vêm da Steam (tools/steam_importar.py cria; tools/update_steam.py mantém as % atualizadas). Dicas, capítulos, roteiro e campos extras são escritos à mão. Nunca mude a chave de uma conquista: ela é o id oficial da Steam e guarda o progresso.",
   "steamAppId": 813780,
-  "updated": "2026-11-16",
+  "updated": "2026-11-23",
   "completion": "",
   "intro": "As 370 conquistas de <strong>Age of Empires II: Definitive Edition</strong> na Steam, do jogo base às DLCs, com o atalho de cada uma, a missão onde sai e o que dá para fazer junto. A mais rara, <em>Acumulardrada</em>, tem menos de 0,1% dos jogadores.",
   "overview": {
@@ -584,7 +584,7 @@
     "BERBERS_VICTORY": {
       "name": "Vitória Berbere",
       "desc": "Vença uma partida jogando com os berberes.",
-      "pct": 21.1,
+      "pct": 21.2,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online).",
       "difficulty": 1,
       "time": "~3 min",
@@ -614,7 +614,7 @@
     "BULGARIANS_VICTORY": {
       "name": "Vitória Búlgara",
       "desc": "Vença uma partida jogando com os búlgaros.",
-      "pct": 22.3,
+      "pct": 22.4,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online).",
       "difficulty": 1,
       "time": "~3 min",
@@ -914,7 +914,7 @@
     "MONGOLS_VICTORY": {
       "name": "Vitória Mongol",
       "desc": "Vença uma partida jogando com os mongóis.",
-      "pct": 24.5,
+      "pct": 24.6,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online).",
       "difficulty": 1,
       "time": "~3 min",
@@ -929,7 +929,7 @@
     "PERSIANS_VICTORY": {
       "name": "Vitória Persa",
       "desc": "Vença uma partida jogando com os persas.",
-      "pct": 23.8,
+      "pct": 23.9,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online).",
       "difficulty": 1,
       "time": "~3 min",
@@ -1019,7 +1019,7 @@
     "TEUTONS_VICTORY": {
       "name": "Vitória Teutoa",
       "desc": "Vença uma partida jogando com os teutões.",
-      "pct": 30.9,
+      "pct": 31.0,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online).",
       "difficulty": 1,
       "time": "~3 min",
@@ -1205,7 +1205,7 @@
     "ACHIEVEMENT_CAMPAIGN_ELDORADO_COMPLETED": {
       "name": "Reformador da Terra",
       "desc": "Complete a Campanha de Pachacuti.",
-      "pct": 4.8,
+      "pct": 4.9,
       "tip": "Vença a missão final da campanha de Pachacuti, em qualquer dificuldade. Jogue já fazendo as conquistas de missão desta campanha para não repetir fases.",
       "difficulty": 2,
       "sources": [
@@ -1293,7 +1293,7 @@
     "ACHIEVEMENT_CAMPAIGN_BURMESE_COMPLETED": {
       "name": "Chakravartin",
       "desc": "Complete a Campanha de Bayinnaung.",
-      "pct": 3.2,
+      "pct": 3.3,
       "tip": "Vença a missão final da campanha de Bayinnaung, em qualquer dificuldade. Jogue já fazendo as conquistas de missão desta campanha para não repetir fases.",
       "difficulty": 2,
       "sources": [
@@ -1679,7 +1679,7 @@
     "ACHIEVEMENT_NO_KILLING_PORTUGUESE": {
       "name": "Amigos e Compatriotas... Ouçam-me!",
       "desc": "Converta Afonso de Albuquerque sem matar uma unidade portuguesa na quinta missão de Francisco de Almeida \"O Sangue de um Filho\".",
-      "pct": 2.3,
+      "pct": 2.4,
       "tip": "Na quinta de Almeida, <em>O Sangue de um Filho</em>, converta Afonso de Albuquerque sem matar nenhum português. Converta primeiro os ~10 inimigos próximos (Monges extras curando) e chegue pela costa noroeste; um Aríete Reforçado absorve as flechas das torres no portão norte.",
       "difficulty": 3,
       "time": "~45 min",
@@ -1963,7 +1963,7 @@
     "ACHIEVEMENT_ELEPHANTASTIC": {
       "name": "Elefantástico",
       "desc": "Treine 40 Elefantes de Batalha ou de Guerra em uma só partida.",
-      "pct": 24.2,
+      "pct": 24.3,
       "tip": "Treine 40 Elefantes de Guerra ou de Batalha numa só partida (ex.: persas ou khmers). Mapa <em>Arena</em>, recursos infinitos, início Pós-Imperial.",
       "difficulty": 1,
       "time": "~15 min",
@@ -2302,7 +2302,7 @@
     "ACHIEVEMENT_EXTREME_AI": {
       "name": "Jogador Proeminente",
       "desc": "Derrote um adversário controlado pelo computador na dificuldade \"Extremo\" em uma partida 1x1.",
-      "pct": 4.9,
+      "pct": 5.0,
       "tip": "Partida 1x1 contra uma IA na dificuldade <em>Extremo</em>. Atalho dos guias: modo <em>Capturar a Relíquia</em>, recursos Altos, início na Era Feudal (ou dos Castelos), mapa Costeiro. Construa Ferraria e Mercado, chegue aos Castelos, pesquise a velocidade dos Monges e leve a relíquia ao seu Mosteiro antes da IA reagir. Cada dificuldade exige uma partida própria. Se o atalho não funcionar, a IA Extrema exige uma vitória de verdade: muralhe cedo e jogue defensivo até os Castelos.",
       "difficulty": 3,
       "time": "~10 min",
@@ -2321,7 +2321,7 @@
     "ACHIEVEMENT_SHEEP_HOARDER": {
       "name": "Acumulador de Ovelhas",
       "desc": "Colete 20 Ovelhas em uma partida de Mapa Aleatório.",
-      "pct": 18.7,
+      "pct": 18.8,
       "tip": "Junte 20 Ovelhas numa partida de Mapa Aleatório. Mapas com muitas ovelhas ajudam: Boêmia, ou Ghost Lake com 8 jogadores (o mapa é grande e cheio de animais).",
       "difficulty": 1,
       "time": "~15 min",
@@ -2399,7 +2399,7 @@
     "ACHIEVEMENT_CAMPAIGN_BURGUNDIANS_COMPLETED": {
       "name": "Bondade, Ousadia e Bravura",
       "desc": "Complete a campanha Os Grão-Duques do Oeste.",
-      "pct": 4.1,
+      "pct": 4.2,
       "tip": "Vença a missão final da campanha de Os Grão-Duques do Oeste, em qualquer dificuldade. Jogue já fazendo as conquistas de missão desta campanha para não repetir fases.",
       "difficulty": 2,
       "sources": [
@@ -2673,7 +2673,7 @@
     "ACHIEVEMENT_NO_QUARTER": {
       "name": "Sem Misericórdia",
       "desc": "Mate Ulrich von Jungingen e Nicolas von Renys em \"Os Frutos de Seu Trabalho\".",
-      "pct": 1.6,
+      "pct": 1.7,
       "tip": "Em <em>Os Frutos de Seu Trabalho</em>, mate Ulrich von Jungingen e Nicolas von Renys. Não faça a missão de recrutar Nicolas (senão ele não luta). Salve antes: são 4 ondas, Nicolas na terceira e Ulrich na última. Ulrich precisa morrer antes dos últimos cavaleiros e a mensagem do grão-mestre tem que aparecer.",
       "difficulty": 3,
       "time": "~1 h",
@@ -2778,7 +2778,7 @@
     "ACHIEVEMENT_FAST_FOOD": {
       "name": "Abastecidos de Comida",
       "desc": "Obtenha 500 de comida construindo fazendas ao lado de Folwarks com os poloneses.",
-      "pct": 12.4,
+      "pct": 12.5,
       "tip": "Jogue de poloneses e colete 500 de comida com fazendas ao lado de Folwarks (o Moinho polonês). Sai jogando a campanha de Jadwiga ou uma escaramuça.",
       "difficulty": 1,
       "time": "~15 min",
@@ -2918,7 +2918,7 @@
     "ACHIEVEMENT_PARINIRVANA": {
       "name": "Parinirvana",
       "desc": "Acumule 100 pontos de devoção em \"Iluminação\".",
-      "pct": 1.8,
+      "pct": 1.9,
       "tip": "Em <em>Iluminação</em>, chegue a 100 de devoção (você começa com 20 e cai com o tempo; há limite de ~13 min segundo um guia). Fontes: +5 por pesquisa da Universidade, +5 por Mosteiro descoberto, +10 por Relíquia salva, +20 por 20 conversões, +20 por Maravilha. Explore com batedor e elefante e pesquise tudo na Universidade.",
       "difficulty": 4,
       "time": "~30 min",
@@ -2942,7 +2942,7 @@
     "ACHIEVEMENT_CAMPAIGN_HOPELESS_ROMANTIC": {
       "name": "Romântico Incurável",
       "desc": "Vença \"A Mão de Uma Princesa\" com pelo menos 12 minutos restantes no timer.",
-      "pct": 2.0,
+      "pct": 2.1,
       "tip": "Em <em>A Mão de Uma Princesa</em> (terceira de Prithviraj), vença com 12+ minutos sobrando (o cronômetro é de 45 no Padrão). Rota: sul, leste, norte. Proteja o Onagro perto do início e use os transportes; leve a princesa e o herói à Maravilha ao norte.",
       "difficulty": 3,
       "time": "~40 min",
@@ -3088,7 +3088,7 @@
     "ACHIEVEMENT_CHALLENGE_ACCEPTED": {
       "name": "Desafio Aceito",
       "desc": "Ganhe qualquer medalha em qualquer Desafio Arte da Guerra.",
-      "pct": 6.9,
+      "pct": 7.0,
       "tip": "Abra os desafios <em>Arte da Guerra</em> (no menu de Campanhas) e conclua o primeiro com qualquer medalha.",
       "difficulty": 1,
       "time": "~10 min",
@@ -3130,7 +3130,7 @@
     "ACHIEVEMENT_BABY_BOOMER": {
       "name": "Baby Boomer",
       "desc": "Fila 5 Aldeões no Centro da Cidade na Idade das Trevas.",
-      "pct": 55.1,
+      "pct": 55.2,
       "tip": "Monte a escaramuça de treino: você + 1 IA aliada contra 1 IA <em>Mais Fácil</em>, recursos infinitos, início na Idade das Trevas. Logo no início, clique 5 vezes em Aldeão no Centro da Cidade para deixar 5 na fila.",
       "difficulty": 1,
       "time": "~1 min",
@@ -3175,7 +3175,7 @@
     "ACHIEVEMENT_PREPARE_FOR_BOAR": {
       "name": "Javalizada!",
       "desc": "Pesquise tear no Centro da Cidade.",
-      "pct": 52.7,
+      "pct": 52.8,
       "tip": "Na mesma partida de treino, pesquise <em>Tear</em> no Centro da Cidade. Com recursos infinitos sai na hora.",
       "difficulty": 1,
       "time": "~1 min",
@@ -3453,7 +3453,7 @@
     "POMPEII_MACEDONIAN_VICTORY": {
       "name": "Vitória da Macedônia",
       "desc": "Venceu uma partida com os Macedônios em Return of Rome.",
-      "pct": 20.0,
+      "pct": 20.1,
       "tip": "No modo Return of Rome, vença uma partida com esta civilização. Use o mesmo atalho do jogo principal (Death Match, Pontuação 4.000, Pós-Imperial); vencer em sequência e sem perder unidades adianta Calmaria, Frieza e Certeza e Ágil como um Pardal.",
       "difficulty": 1,
       "time": "~3 min",
@@ -3528,7 +3528,7 @@
     "POMPEII_ROMAN_VICTORY": {
       "name": "Vitória de Roma",
       "desc": "Vença uma partida com os Romanos em Return of Rome.",
-      "pct": 28.9,
+      "pct": 29.0,
       "tip": "No modo Return of Rome, vença uma partida com esta civilização. Use o mesmo atalho do jogo principal (Death Match, Pontuação 4.000, Pós-Imperial); vencer em sequência e sem perder unidades adianta Calmaria, Frieza e Certeza e Ágil como um Pardal.",
       "difficulty": 1,
       "time": "~3 min",
@@ -3599,7 +3599,7 @@
     "ACHIEVEMENT_CALM_COOL_AND_COLLECTED": {
       "name": "Calmaria, Frieza e Certeza",
       "desc": "Vença 3 partidas seguidas em Return of Rome.",
-      "pct": 27.0,
+      "pct": 27.1,
       "tip": "Vença 3 partidas seguidas em Return of Rome. Sai sozinha fazendo as vitórias por civilização em sequência.",
       "difficulty": 1,
       "together": [
@@ -3678,7 +3678,7 @@
     "ACHIEVEMENT_PHILHELLENE": {
       "name": "Fileleno",
       "desc": "Complete a campanha Glória da Grécia",
-      "pct": 9.1,
+      "pct": 9.2,
       "tip": "Conclua a campanha clássica <em>Glória da Grécia</em> (do primeiro Age of Empires) no modo Return of Rome. Missões curtas; qualquer dificuldade.",
       "difficulty": 2,
       "sources": [
@@ -3708,7 +3708,7 @@
     "ACHIEVEMENT_SNEAK_ATTACK": {
       "name": "Ataque Furtivo",
       "desc": "Mate Farrukh Yasar antes que ele chegue à fortaleza em ''Os Chapéus Vermelhos''",
-      "pct": 6.1,
+      "pct": 6.2,
       "tip": "Em <em>Os Chapéus Vermelhos</em>, mate Farrukh Yasar antes de ele chegar à fortaleza. Junte antes os três grupos ao sul, posicione as tropas perto do caminho dele e só então dispare o objetivo com Ismail: você tem ~70–80 s. Salve antes.",
       "difficulty": 4,
       "time": "~30 min",
@@ -3744,7 +3744,7 @@
     "ACHIEVEMENT_CAMPAIGN_ARMENIANS_COMPLETED": {
       "name": "Senhor das Montanhas",
       "desc": "Complete a campanha de Teodoro, o Grande.",
-      "pct": 27.4,
+      "pct": 27.5,
       "tip": "Vença a missão final da campanha de Teodoro, o Grande, em qualquer dificuldade. Jogue já fazendo as conquistas de missão desta campanha para não repetir fases.",
       "difficulty": 2,
       "sources": [
@@ -3754,7 +3754,7 @@
     "ACHIEVEMENT_BOUNTY_HUNTER": {
       "name": "Caçador de Recompensas",
       "desc": "Converta pelo menos três generais bizantinos em ''A Vingança do Imperador''.",
-      "pct": 10.4,
+      "pct": 10.5,
       "tip": "Em <em>A Vingança do Imperador</em>, converta pelo menos 3 dos 5 generais bizantinos. Fique com a base da esquerda, limpe o acampamento azul-petróleo primeiro, salve antes de cada tentativa e atraia o general até seu exército antes de converter.",
       "difficulty": 3,
       "time": "~1 h",
@@ -3766,7 +3766,7 @@
     "ACHIEVEMENT_RAIDING_PARTY": {
       "name": "Grupo de Assalto!",
       "desc": "Derrote todos os jogadores Cipriotas inimigos em ''Ondas Sangrentas''.",
-      "pct": 13.4,
+      "pct": 13.5,
       "tip": "Em <em>Ondas Sangrentas</em>, derrote os três cipriotas antes de destruir a nona doca bizantina. Fique com o lado direito, desenvolva, defenda dos navios roxos e use infantaria com Trabucos nas bases fortificadas.",
       "difficulty": 3,
       "time": "~1 h",
@@ -3778,7 +3778,7 @@
     "ACHIEVEMENT_CHURCH_SANCTUARY": {
       "name": "Santuário da Igreja",
       "desc": "Não perca nenhum Aldeão Tarso em ''Sobre Vira-Casacas e Traidores''.",
-      "pct": 6.4,
+      "pct": 6.5,
       "tip": "Em <em>Sobre Vira-Casacas e Traidores</em>, não perca nenhum dos 20 aldeões de Tarso. Há um bug: Castelos e Centros podem não ejetar os aldeões quando o dono muda. Guarneça os 20 num Castelo e desguarneça antes do cronômetro de Reinaldo zerar.",
       "difficulty": 3,
       "time": "~45 min",
@@ -3812,7 +3812,7 @@
     "ACHIEVEMENT_AUNTIE_DEAREST": {
       "name": "Tia Querida",
       "desc": "Garanta que Aléxio conclua sua Maravilha em ''Tamara, a Construtora''.",
-      "pct": 22.9,
+      "pct": 23.0,
       "tip": "Em <em>Tamara, a Construtora</em>, garanta que Aléxio termine a Maravilha em Trebizonda: limpe a base cinza para ele com Monaspas e Trabucos (o cinza não reage aos Trabucos) e corra com cavalaria ao Centro da Cidade para forçar a rendição.",
       "difficulty": 3,
       "time": "~1 h",
@@ -3836,7 +3836,7 @@
     "ARMENIANS_VICTORY": {
       "name": "Vitória Armênia",
       "desc": "Vença uma partida jogando com os armênios.",
-      "pct": 53.7,
+      "pct": 53.8,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online). Exige The Mountain Royals. Se a conquista Age of Empires não destravar no fim, vença de novo com armênios: há relato de que a contagem zera.",
       "difficulty": 1,
       "time": "~3 min",
@@ -3852,7 +3852,7 @@
     "GEORGIANS_VICTORY": {
       "name": "Vitória Georgiana",
       "desc": "Vença uma partida jogando com os georgianos.",
-      "pct": 52.9,
+      "pct": 53.0,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online). Exige The Mountain Royals. Se a conquista Age of Empires não destravar no fim, vença de novo com georgianos: há relato de que a contagem zera.",
       "difficulty": 1,
       "time": "~3 min",
@@ -3890,7 +3890,7 @@
     "ACHIEVEMENT_THE_OLD_FASHIONED_WAY": {
       "name": "Do Jeito Antigo",
       "desc": "Vença sem construir um Trabuco em ''Estevão (1135)",
-      "pct": 13.2,
+      "pct": 13.3,
       "tip": "Em <em>Estevão (1135)</em>, vença sem construir Trabucos. Use torres e unidades defensivas até os Castelos, relíquias para ouro, Arqueiros de Arco Longo e Aríetes para empurrar.",
       "difficulty": 4,
       "time": "~1,5 h",
@@ -3901,7 +3901,7 @@
     "ACHIEVEMENT_DAIMYO_OF_THE_NINE_PROVINCES": {
       "name": "Daimyo das Nove Províncias",
       "desc": "Derrote o Xogum e conquistou as nove províncias em 1600 EC em ''Shimazu (1545)''",
-      "pct": 11.0,
+      "pct": 11.1,
       "tip": "Em <em>Shimazu (1545)</em>, destrua os 9 Castelos das províncias antes de 1600. Minere o ouro sem guarda perto do início, faça a missão do grande posto comercial (libera mosqueteiros), não pague o Xogum e avance com 40+ mosqueteiros e 6+ cercos.",
       "difficulty": 4,
       "time": "~1,5 h",
@@ -3989,7 +3989,7 @@
     "ACHIEVEMENT_SO_EPIC": {
       "name": "Épico Demais",
       "desc": "Complete todos os 50 objetivos da Saga em ''Ragnar (850)''",
-      "pct": 10.9,
+      "pct": 11.0,
       "tip": "Em <em>Ragnar (850)</em>, cumpra os 50 objetivos da Saga: explore tudo, colonize as ilhotas perto da Britânia (as ovelhas marcam), cumpra as 30 da missão principal e leve Huskarls e Aríetes para Inglaterra e francos. Salve sempre; ~4 h.",
       "difficulty": 5,
       "time": "~4 h",
@@ -4093,7 +4093,7 @@
     "ACHIEVEMENT_CAMPAIGN_BATTLE_FOR_GREECE_COMPLETED": {
       "name": "Nêmese",
       "desc": "Terminou toda a campanha Crônicas: Batalha pela Grécia.",
-      "pct": 16.7,
+      "pct": 16.8,
       "tip": "Conclua toda a campanha Crônicas: Batalha pela Grécia. Planeje as conquistas mutuamente exclusivas (relíquias e tumbas) antes.",
       "difficulty": 3,
       "sources": [
@@ -4134,7 +4134,7 @@
     "ACHIEVEMENT_FIRST_CITIZEN": {
       "name": "Primeiro Cidadão",
       "desc": "Completou ''Dentro das Longas Muralhas'' sem que seu favor caísse abaixo de 50.",
-      "pct": 5.4,
+      "pct": 5.5,
       "tip": "Em <em>Dentro das Longas Muralhas</em>, não deixe o favor cair abaixo de 50: muitos mercadores e barcos de pesca, lanceiros para matar comandantes e processe Cléon cedo (2.000 de ouro no Padrão). Venda madeira no Mercado.",
       "difficulty": 4,
       "time": "~1 h",
@@ -4275,7 +4275,7 @@
     "ACHIEVEMENT_BLOCKADE_BREAKER": {
       "name": "Destruidor de Bloqueio",
       "desc": "Destrua os dois bloqueios navais em ''Divina Salamina''.",
-      "pct": 21.2,
+      "pct": 21.3,
       "tip": "Em <em>Divina Salamina</em>, destrua os dois bloqueios navais: terceira base a sudoeste, Leviatãs nos fortes, ataque o vermelho primeiro (atacar o roxo dispara o ataque de Artemísia).",
       "difficulty": 3,
       "time": "~1 h",
@@ -4299,7 +4299,7 @@
     "ACHIEVEMENT_REJECT_THE_REGENT": {
       "name": "Rejeitar o Regente",
       "desc": "Deu relíquia a Salamina em ''Do outro lado do Mar Vinho-Escuro'' e Polícrito em ''Ira do Regente''.",
-      "pct": 6.4,
+      "pct": 6.5,
       "tip": "Dê a relíquia a Salamina em <em>Do Outro Lado do Mar Vinho-Escuro</em> e a Polícrito na <em>Ira do Regente</em>. O roxo vira aliado depois do templo: salve com 3/4 auras e antes de Bizâncio, e carregue para fazer o Philolacon.",
       "difficulty": 2,
       "together": [
@@ -4323,7 +4323,7 @@
     "ACHIEVEMENT_BY_AHURAMAZDAS_GRACE": {
       "name": "Pela Graça de Aúra-Masda",
       "desc": "Pesquisou uma melhoria do Centro Urbano Aquemênidas.",
-      "pct": 44.0,
+      "pct": 44.1,
       "tip": "Nas Crônicas: Batalha pela Grécia, jogue de aquemênidas e pesquise uma melhoria do Centro Urbano. Sai na escaramuça de Crônicas ou na campanha.",
       "difficulty": 1,
       "time": "~10 min",
@@ -4351,7 +4351,7 @@
     "ACHIEVEMENT_PROMACHOS": {
       "name": "Promacos",
       "desc": "Matou 10 unidades inimigas com um Polemarco Espartano.",
-      "pct": 31.7,
+      "pct": 31.8,
       "tip": "Nas Crônicas: Batalha pela Grécia, jogue de espartanos e mate 10 unidades inimigas com o Polemarco.",
       "difficulty": 1,
       "time": "~15 min",
@@ -4397,7 +4397,7 @@
     "SPARTANS_VICTORY": {
       "name": "Vitória Espartana",
       "desc": "Vença uma partida jogando com os Espartanos em Crônicas: Batalha pela Grécia.",
-      "pct": 33.8,
+      "pct": 33.9,
       "tip": "Vença uma partida de espartanos no modo Crônicas: Batalha pela Grécia (escaramuça de Crônicas ou campanha). Segundo um guia, estas vitórias contam para a conquista Age of Empires.",
       "difficulty": 1,
       "time": "~10 min",
@@ -4442,7 +4442,7 @@
     "SHU_VICTORY": {
       "name": "Vitória de Shu",
       "desc": "Vença uma partida jogando com os Shu.",
-      "pct": 27.2,
+      "pct": 27.3,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online). Exige The Three Kingdoms.",
       "difficulty": 1,
       "time": "~3 min",
@@ -4482,7 +4482,7 @@
     "ACHIEVEMENT_A_HERO_COMES": {
       "name": "Surge um Herói; Ele Ganha Renome",
       "desc": "Use uma das habilidades ativas dos seus heróis em Liu Bei 1.",
-      "pct": 16.3,
+      "pct": 16.4,
       "tip": "Em Liu Bei 1, use uma habilidade ativa de qualquer herói (botão no painel do herói) e termine o mapa.",
       "difficulty": 1,
       "sources": [
@@ -4492,7 +4492,7 @@
     "ACHIEVEMENT_AWAKEN_THE_DRAGON": {
       "name": "Desperte o Dragão",
       "desc": "Posicione a Armadilha de Fogo de Zhuge Liang em Liu Bei 3",
-      "pct": 14.1,
+      "pct": 14.2,
       "tip": "Em Liu Bei 3, posicione a Armadilha de Fogo de Zhuge Liang: seja rápido na primeira parte, pesquise Química e ataque uma torre fora da base laranja para disparar a armadilha; a base pega fogo.",
       "difficulty": 3,
       "time": "~1 h",
@@ -4514,7 +4514,7 @@
     "ACHIEVEMENT_CAMPAIGN_WEI_COMPLETED": {
       "name": "Herói do Caos",
       "desc": "Conclua a campanha de Cao Cao.",
-      "pct": 11.5,
+      "pct": 11.6,
       "tip": "Vença a missão final da campanha de Cao Cao, em qualquer dificuldade. Jogue já fazendo as conquistas de missão desta campanha para não repetir fases.",
       "difficulty": 2,
       "sources": [
@@ -4546,7 +4546,7 @@
     "ACHIEVEMENT_DO_NOT_PURSUE": {
       "name": "Não Persiga Lü Bu",
       "desc": "Derrote Lü Bu antes dos 20 minutos em Cao Cao 2.",
-      "pct": 13.5,
+      "pct": 13.6,
       "tip": "Em Cao Cao 2, derrote Lü Bu (cinza) em menos de 20 min: mande uma unidade ao acampamento amarelo mais próximo (5 carroças), tome os três acampamentos amarelos, escolha Cao Ren como segundo herói e espere o ataque aos 3:20. Aríetes melhorados.",
       "difficulty": 4,
       "time": "~45 min",
@@ -4578,7 +4578,7 @@
     "ACHIEVEMENT_THE_LITTLE_CONQUEROR": {
       "name": "O Pequeno Conquistador",
       "desc": "Derrote o Tigre Branco no Clã do Sol 3.",
-      "pct": 11.6,
+      "pct": 11.7,
       "tip": "No Clã do Sol 3, liberte as cidades e destrua os 6 acampamentos verdes antes de o amarelo avançar (quando o cronômetro acaba).",
       "difficulty": 3,
       "time": "~1 h",
@@ -4600,7 +4600,7 @@
     "ACHIEVEMENT_DRIVE_BY_BARRAGE": {
       "name": "Bombardeio de Passagem",
       "desc": "Construa 20 Carruagens de Guerra jogando com os Shu.",
-      "pct": 12.0,
+      "pct": 12.1,
       "tip": "Jogue de Shu e construa 20 Carruagens de Guerra. Escaramuça Imperial com 200 de população.",
       "difficulty": 1,
       "time": "~15 min",
@@ -4614,7 +4614,7 @@
     "ACHIEVEMENT_SHUING_ENEMIES": {
       "name": "Shuando os Inimigos",
       "desc": "Mate 50 unidades com Guardas da Pluma Branca jogando com os Shu.",
-      "pct": 23.1,
+      "pct": 23.2,
       "tip": "Jogue de Shu e mate 50 unidades com Guardas da Pluma Branca.",
       "difficulty": 2,
       "time": "~20 min",
@@ -4628,7 +4628,7 @@
     "ACHIEVEMENT_TIME_FOR_A_RAISE": {
       "name": "Hora de ser Promovido",
       "desc": "Promova totalmente 10 Cavalarias Tigre jogando com os Wei.",
-      "pct": 25.5,
+      "pct": 25.6,
       "tip": "Jogue de Wei e promova totalmente 10 Cavalarias Tigre (sobem de nível matando). Deixe-as caçar unidades fracas da IA.",
       "difficulty": 2,
       "time": "~30 min",
@@ -4642,7 +4642,7 @@
     "ACHIEVEMENT_WEI_MARCH_ON_OUR_STOMACHS": {
       "name": "Wei Marcha em Nossos Estômagos",
       "desc": "Gere 5.000 de Comida com Tuntian jogando com os Wei.",
-      "pct": 17.8,
+      "pct": 17.9,
       "tip": "Jogue de Wei e gere 5.000 de comida com Tuntian (renda que cresce com as unidades militares). Faça muita cavalaria e deixe a partida correr.",
       "difficulty": 2,
       "time": "~30 min",
@@ -4656,7 +4656,7 @@
     "ACHIEVEMENT_ACID_RAIN": {
       "name": "Chuva Ácida",
       "desc": "Destrua 20 construções com Arqueiros de Fogo jogando com os Wu.",
-      "pct": 19.6,
+      "pct": 19.7,
       "tip": "Jogue de Wu, pesquise a tecnologia do Castelo dos Arqueiros de Fogo e destrua 20 construções com eles.",
       "difficulty": 2,
       "time": "~20 min",
@@ -4698,7 +4698,7 @@
     "KHITANS_VICTORY": {
       "name": "Vitória de Quitais",
       "desc": "Vença uma partida jogando com os Quitais.",
-      "pct": 14.9,
+      "pct": 15.0,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online). Exige The Three Kingdoms. Um guia relata que o atalho de pontuação não funciona com os quitais; use uma escaramuça com recursos altos e vença normalmente.",
       "difficulty": 1,
       "time": "~3 min",
@@ -4763,7 +4763,7 @@
     "ACHIEVEMENT_IRON_ARMY": {
       "name": "Exército de Ferro",
       "desc": "Bloqueie 100 ataques com Pagodes jogando com os jagudos.",
-      "pct": 8.8,
+      "pct": 8.9,
       "tip": "Jogue de jurchéns e bloqueie 100 ataques com Pagodes de Ferro (a cavalaria única). Deixe-os apanhar de arqueiros e infantaria da IA.",
       "difficulty": 2,
       "time": "~20 min",
@@ -4777,7 +4777,7 @@
     "ACHIEVEMENT_MEDIEVAL_SLASHER": {
       "name": "Retalhador Medieval",
       "desc": "Mate 50 unidades com Liao Daos jogando com os Khitans.",
-      "pct": 13.4,
+      "pct": 13.5,
       "tip": "Jogue de quitais e mate 50 unidades com Liao Daos.",
       "difficulty": 2,
       "time": "~20 min",
@@ -4791,7 +4791,7 @@
     "ACHIEVEMENT_CAMPAIGN_PROVIDENCE_COMPLETED": {
       "name": "O Grande",
       "desc": "Termine toda a campanha de Crônicas: Alexandre, o Grande.",
-      "pct": 18.8,
+      "pct": 18.9,
       "tip": "Termine toda a campanha Crônicas: Alexandre, o Grande.",
       "difficulty": 3,
       "sources": [
@@ -4813,7 +4813,7 @@
     "ACHIEVEMENT_BASILEUS": {
       "name": "Basílio",
       "desc": "Alcance 100 de Legitimidade em ''Direito de Governar''.",
-      "pct": 25.2,
+      "pct": 25.3,
       "tip": "Em <em>Direito de Governar</em>, chegue a 100 de Legitimidade: cada tribo destruída dá 15 e cada torre reforçada 5; dá para chegar a 75–90 sem atacar. Comece a destruir tribos perto de 70.",
       "difficulty": 3,
       "time": "~1 h",
@@ -4849,7 +4849,7 @@
     "ACHIEVEMENT_ALEXANDRIA_ESCHATE": {
       "name": "Alexandria Eschate",
       "desc": "Aprimore completamente todos os distritos em ''A Cidade nos Confins do Mundo''.",
-      "pct": 16.7,
+      "pct": 16.8,
       "tip": "Em <em>A Cidade nos Confins do Mundo</em>, aprimore todos os distritos (9 melhorias com 3 níveis). Priorize economia e mercado; bigas na defesa norte e sinalizadores ao aliado azul-petróleo a leste.",
       "difficulty": 3,
       "time": "~1 h",
@@ -4907,7 +4907,7 @@
     "MACEDONIAN_VICTORY": {
       "name": "Vitória da Macedônia (Crônica)",
       "desc": "Vença uma partida jogando como os macedônios em Crônicas: Alexandre, o Grande.",
-      "pct": 43.2,
+      "pct": 43.3,
       "tip": "Vença uma partida de macedônios no modo Crônicas: Alexandre, o Grande (escaramuça de Crônicas ou campanha).",
       "difficulty": 1,
       "time": "~10 min",
@@ -4940,7 +4940,7 @@
     "ACHIEVEMENT_CAMPAIGN_MAPUCHE_COMPLETED": {
       "name": "Chile com Carnificina",
       "desc": "Complete a campanha Mapuche.",
-      "pct": 28.8,
+      "pct": 28.9,
       "tip": "Vença a missão final da campanha de Lautaro (mapuches), em qualquer dificuldade. Jogue já fazendo as conquistas de missão desta campanha para não repetir fases.",
       "difficulty": 2,
       "sources": [
@@ -4951,7 +4951,7 @@
     "ACHIEVEMENT_HOMELAND_INSECURITY": {
       "name": "Insegurança Interna",
       "desc": "Mantenha ao menos três vilas aliadas sob seu controle em ''Deuses da Morte e do Terror''.",
-      "pct": 11.2,
+      "pct": 11.3,
       "tip": "Em <em>Deuses da Morte e do Terror</em>, mantenha 3 das 5 vilas aliadas por 40 minutos: tropas nas três vilas mais próximas e Torres de Flechas. Vencer esta missão também dá a Vitória Mapuche.",
       "difficulty": 3,
       "time": "~1 h",
@@ -4966,7 +4966,7 @@
     "ACHIEVEMENT_OUR_LITTLE_PONIES": {
       "name": "Nossos Pequenos Pôneis",
       "desc": "Traga todos os 25 cavalos para o curral aliado em ''A Batalha de Tucapel''.",
-      "pct": 20.1,
+      "pct": 20.2,
       "tip": "Em <em>A Batalha de Tucapel</em>, limpe os inimigos nos 5 locais dos cavalos e conduza os 25 potros ao curral aliado.",
       "difficulty": 3,
       "time": "~1 h",
@@ -4989,7 +4989,7 @@
     "ACHIEVEMENT_TAKE_IRACA": {
       "name": "Não Se Pode Simplesmente Tomar Iraca",
       "desc": "Não permita que seu inimigo conquiste o estado de Iraca para o lado dele em ''Zipa e Zaque''.",
-      "pct": 14.4,
+      "pct": 14.5,
       "tip": "Em <em>Zipa e Zaque</em>, não deixe o inimigo conquistar Iraca: evite tomar o apoio de Iraca cedo; ou bloqueie o portão com um assentamento e capture Iraca depois do nono Castelo e antes do décimo.",
       "difficulty": 3,
       "time": "~1 h",
@@ -5024,7 +5024,7 @@
     "ACHIEVEMENT_DYNAMITE_DELUXE": {
       "name": "Dinamite de Luxo",
       "desc": "Encontre e exploda todos os barris de pólvora em ''Virando Fumaça''.",
-      "pct": 18.5,
+      "pct": 18.6,
       "tip": "Em <em>Virando Fumaça</em>, exploda os 80 barris de pólvora da ilha principal e da ilhota sul: navios na ilhota; na ilha, limpe os barris perto dos 5 Castelos e atraia os defensores para explodir os de dentro da cidade (petardos ou Trabucos).",
       "difficulty": 4,
       "time": "~1 h",
@@ -5048,7 +5048,7 @@
     "MAPUCHE_VICTORY": {
       "name": "Vitória Mapuche",
       "desc": "Vença uma partida jogando como os mapuches.",
-      "pct": 50.3,
+      "pct": 50.5,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online). Exige The Last Chieftains.",
       "difficulty": 1,
       "time": "~3 min",
@@ -5063,7 +5063,7 @@
     "MUISCA_VICTORY": {
       "name": "Vitória Chibchas",
       "desc": "Vença uma partida jogando como os chibchas.",
-      "pct": 45.2,
+      "pct": 45.3,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online). Exige The Last Chieftains.",
       "difficulty": 1,
       "time": "~3 min",
@@ -5078,7 +5078,7 @@
     "TUPI_VICTORY": {
       "name": "Vitória Tupi",
       "desc": "Vença uma partida jogando como os tupi.",
-      "pct": 50.0,
+      "pct": 50.1,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online). Exige The Last Chieftains.",
       "difficulty": 1,
       "time": "~3 min",
@@ -5093,7 +5093,7 @@
     "ACHIEVEMENT_SURVEILLANCE_NETWORK": {
       "name": "Rede de Vigilância",
       "desc": "Construa 10 Postos Avançados com Guerreiros Champi.",
-      "pct": 18.4,
+      "pct": 18.5,
       "tip": "Jogue de tupis e construa 10 Postos Avançados com Guerreiros Champi numa só partida.",
       "difficulty": 1,
       "time": "~15 min",
@@ -5107,7 +5107,7 @@
     "ACHIEVEMENT_CAMPAIGN_HARALD1_COMPLETED": {
       "name": "A Jornada do Herói",
       "desc": "Conclua a Campanha O Príncipe Exilado.",
-      "pct": 32.5,
+      "pct": 32.9,
       "tip": "Vença a missão final da campanha de O Príncipe Exilado (Haroldo), em qualquer dificuldade. Jogue já fazendo as conquistas de missão desta campanha para não repetir fases. Pegue o baú lendário de cada missão para o Acumulardrada.",
       "difficulty": 2,
       "together": [
@@ -5121,7 +5121,7 @@
     "ACHIEVEMENT_THE_STUFF_OF_LEGEND": {
       "name": "A Essência das Lendas",
       "desc": "Conclua as missões secundárias referentes à derrota de uma cidade siciliana em ''Serva da Morte''.",
-      "pct": 19.0,
+      "pct": 19.1,
       "tip": "Em <em>Serva da Morte</em>, conclua as missões secundárias das cidades sicilianas: verde (destrua as 3 torres externas), amarelo (mate a escolta e escolha a rota sul), laranja (minere a pilha de pedra que abre o túnel). O vermelho solta uma Maravilha por volta dos 50 min.",
       "difficulty": 4,
       "time": "~1,5 h",
@@ -5133,7 +5133,7 @@
     "ACHIEVEMENT_GANG_BACK_TOGETHER": {
       "name": "Reunindo a Turma",
       "desc": "Encontre todos os soldados varangianos em Constantinopla em ''O Guerreiro que Alimentou os Lobos''.",
-      "pct": 29.1,
+      "pct": 29.5,
       "tip": "Em <em>O Guerreiro que Alimentou os Lobos</em>, encontre os soldados varangianos dos 12 quartéis verdes de Constantinopla. Use os 4 mosteiros como pontos de apoio; os dois últimos ficam perto das docas e as cercas só abrem avançando a missão principal.",
       "difficulty": 3,
       "time": "~1 h",
@@ -5145,7 +5145,7 @@
     "ACHIEVEMENT_CAMPAIGN_HARALD2_COMPLETED": {
       "name": "Tirano do Elmo com Chifres",
       "desc": "Conclua a Campanha O Governante Duro.",
-      "pct": 26.6,
+      "pct": 27.1,
       "tip": "Vença a missão final da campanha de O Governante Duro, em qualquer dificuldade. Jogue já fazendo as conquistas de missão desta campanha para não repetir fases.",
       "difficulty": 2,
       "together": [
@@ -5159,7 +5159,7 @@
     "ACHIEVEMENT_LEAVE_MAGNUS_ALONE": {
       "name": "Deixem Magno em Paz!!",
       "desc": "Não permita que o inimigo destrua uma única Doca aliada em ''Através dos Juncos da Matança''.",
-      "pct": 19.0,
+      "pct": 19.3,
       "tip": "Em <em>Através dos Juncos da Matança</em>, não deixe destruir nenhuma das 6 docas aliadas: minere pedra cedo, dois Castelos e torres a oeste, frota em rodízio (defesa + ataque). No Padrão, Navios de Fogo e Dracares bastam.",
       "difficulty": 4,
       "time": "~1 h",
@@ -5171,7 +5171,7 @@
     "ACHIEVEMENT_YOUR_GOD_NOW": {
       "name": "Sou Seu Deus Agora",
       "desc": "Pacifique ao menos 2 condados com uma Relíquia em seus Mosteiros em \"Homens Errantes da Noruega\".",
-      "pct": 25.7,
+      "pct": 26.1,
       "tip": "Em <em>Homens Errantes da Noruega</em>, pacifique 2 condados com relíquias nos Mosteiros deles. São 3 relíquias (abaixo da base laranja, acima da sua, à direita da roxa); ordem: amarelo, roxo, verde. O baú lendário fica ao sul da base azul.",
       "difficulty": 3,
       "time": "~1 h",
@@ -5183,7 +5183,7 @@
     "ACHIEVEMENT_CAMPAIGN_HARALD3_COMPLETED": {
       "name": "Sete Pés de Terra Inglesa",
       "desc": "Conclua a Campanha O Último Viking.",
-      "pct": 19.1,
+      "pct": 19.6,
       "tip": "Vença a missão final da campanha de O Último Viking, em qualquer dificuldade. Jogue já fazendo as conquistas de missão desta campanha para não repetir fases.",
       "difficulty": 2,
       "together": [
@@ -5197,7 +5197,7 @@
     "ACHIEVEMENT_GET_OUT_OF_MY_SWAMP": {
       "name": "Caia Fora do Meu Pântano!",
       "desc": "Não permita que o inimigo capture o Monumento em Riccall em ''Portão de Fulford''.",
-      "pct": 21.8,
+      "pct": 22.3,
       "tip": "Em <em>Portão de Fulford</em>, não deixe capturarem o Monumento de Riccall: bestas no entroncamento, Castelo no lado leste e torre contra o amarelo.",
       "difficulty": 3,
       "time": "~1 h",
@@ -5209,7 +5209,7 @@
     "ACHIEVEMENT_HOARDRADA": {
       "name": "Acumulardrada",
       "desc": "Vença \"A batalha de Stamford Bridge\" com todos os itens lendários coletados.",
-      "pct": 6.2,
+      "pct": 6.3,
       "tip": "Pegue o baú lendário de cada missão das três campanhas de Haroldo e vença <em>A Batalha de Stamford Bridge</em>. Siga a ordem das campanhas (Príncipe Exilado, Governante Duro, Último Viking); perder um baú pode travar a conquista. Veja onde fica cada baú antes de começar a missão; se faltar um, rejogue aquela missão antes de Stamford Bridge.",
       "difficulty": 5,
       "sources": [
@@ -5220,7 +5220,7 @@
     "SAXONS_VICTORY": {
       "name": "Vitória dos Saxões",
       "desc": "Vença uma partida jogando com os saxões.",
-      "pct": 41.8,
+      "pct": 42.5,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online). Exige The Viking Sagas.",
       "difficulty": 1,
       "time": "~3 min",
@@ -5235,7 +5235,7 @@
     "VARANGIANS_VICTORY": {
       "name": "Vitória dos Varangianos",
       "desc": "Vença uma partida jogando com os varangianos.",
-      "pct": 56.3,
+      "pct": 56.8,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online). Exige The Viking Sagas.",
       "difficulty": 1,
       "time": "~3 min",
@@ -5250,7 +5250,7 @@
     "DANES_VICTORY": {
       "name": "Vitória dos Dinamarqueses",
       "desc": "Vença uma partida jogando com os dinamarqueses.",
-      "pct": 50.3,
+      "pct": 51.0,
       "tip": "Atalho: escaramuça contra 1 IA no modo <em>Death Match</em>, vitória por <em>Pontuação</em> de 4.000 e início Pós-Imperial; a pontuação passa da meta em segundos. Também conta qualquer vitória normal (campanha, escaramuça ou online). Exige The Viking Sagas.",
       "difficulty": 1,
       "time": "~3 min",
@@ -5265,7 +5265,7 @@
     "ACHIEVEMENT_MURDER_FOR_HIRE": {
       "name": "Assassinato por Encomenda",
       "desc": "Acumule 10.000 de ouro usando Guardas Varegues.",
-      "pct": 33.7,
+      "pct": 34.2,
       "tip": "Jogue de varangianos e acumule 10.000 de ouro com Guardas Varegues (eles rendem ouro lutando). Faça muitos e ataque sem parar.",
       "difficulty": 2,
       "time": "~40 min",
